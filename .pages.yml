@@ -1,0 +1,115 @@
+# Pages CMS dashboard for Lazy Tale Studio  (https://app.pagescms.org)
+media:
+  input: images/uploads
+  output: images/uploads
+  categories: [image]
+
+content:
+  - name: projects
+    label: Portfolio
+    type: file
+    path: content/projects.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - { name: covers, label: Book Covers }
+            - { name: games, label: Game Art }
+            - { name: comics, label: Comic & Webtoon }
+            - { name: worlds, label: World Building }
+      - name: type
+        label: Format (e.g. Book cover, Full wrap cover, Webtoon)
+        type: string
+      - name: year
+        label: Year
+        type: string
+      - name: image
+        label: Main image (shown in the gallery)
+        type: image
+        required: true
+      - name: tags
+        label: Tags (one per line, without #)
+        type: string
+        list: true
+      - name: description
+        label: Short description
+        type: text
+      - name: story
+        label: Project story (optional, shown in the project window)
+        type: text
+      - name: formats
+        label: Other sizes / versions (optional)
+        type: object
+        list:
+          collapsible: { collapsed: true, summary: "{label}" }
+        fields:
+          - { name: image, label: Image, type: image }
+          - { name: label, label: Name (e.g. Wide capsule), type: string }
+          - { name: note, label: Note (e.g. 1920 × 1080), type: string }
+      - name: process
+        label: Process images (optional, sketches, colour studies, WIP)
+        type: object
+        list:
+          collapsible: { collapsed: true, summary: "{label}" }
+        fields:
+          - { name: image, label: Image, type: image }
+          - { name: label, label: Step name (e.g. Sketch), type: string }
+          - { name: note, label: Note, type: string }
+      - name: hidden
+        label: Hide from website
+        type: boolean
+
+  - name: showreel
+    label: Banner showreel
+    type: file
+    path: content/showreel.json
+    format: json
+    list: true
+    fields:
+      - name: image
+        label: Image
+        type: image
+        required: true
+      - name: title
+        label: Title
+        type: string
+      - name: type
+        label: Caption (e.g. Book cover)
+        type: string
+      - name: move
+        label: Camera move
+        type: select
+        options:
+          values:
+            - { name: push, label: Slow zoom in }
+            - { name: tilt, label: Pan down a tall image }
+            - { name: drift, label: Slow sideways pan }
+            - { name: fan, label: Three covers fly in }
+      - name: fan
+        label: Covers for "Three covers fly in" (pick 3)
+        type: image
+        options:
+          multiple: { max: 3 }
+      - name: wipe
+        label: Neon logo wipe before this shot
+        type: boolean
+
+  - name: site
+    label: Contact & intro
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: tagline, label: Intro text under the studio name, type: text }
+      - { name: email, label: Email, type: string }
+      - { name: discord, label: Discord, type: string }
+      - { name: instagram, label: Instagram link, type: string }
