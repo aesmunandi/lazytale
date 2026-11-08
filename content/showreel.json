@@ -1,0 +1,78 @@
+[
+  {
+    "move": "push",
+    "title": "World of Kala",
+    "type": "Original IP",
+    "wipe": false,
+    "image": "images/world-of-kala-wide.jpg",
+    "fan": []
+  },
+  {
+    "move": "tilt",
+    "title": "Lantern Tree",
+    "type": "Destination Wilds",
+    "wipe": false,
+    "image": "images/reel-lantern-tree.jpg",
+    "fan": []
+  },
+  {
+    "move": "tilt",
+    "title": "The Dark King",
+    "type": "Book cover",
+    "wipe": false,
+    "image": "images/reel-dark-king.jpg",
+    "fan": []
+  },
+  {
+    "move": "push",
+    "title": "Wild West",
+    "type": "Environment",
+    "wipe": false,
+    "image": "images/reel-wild-west.jpg",
+    "fan": []
+  },
+  {
+    "move": "fan",
+    "title": "Book covers",
+    "type": "Selected",
+    "wipe": true,
+    "image": "images/new-frontier.jpg",
+    "fan": [
+      "images/new-frontier.jpg",
+      "images/min-maxing-2.jpg",
+      "images/sword-and-stones.jpg"
+    ]
+  },
+  {
+    "move": "push",
+    "title": "BlackVeins",
+    "type": "Character · World building",
+    "wipe": false,
+    "image": "images/reel-blackveins.jpg",
+    "fan": []
+  },
+  {
+    "move": "tilt",
+    "title": "The Colossus",
+    "type": "Destination Wilds",
+    "wipe": false,
+    "image": "images/reel-colossus.jpg",
+    "fan": []
+  },
+  {
+    "move": "drift",
+    "title": "The Malay Mysteries",
+    "type": "Comic",
+    "wipe": false,
+    "image": "images/reel-malay-mysteries.jpg",
+    "fan": []
+  },
+  {
+    "move": "tilt",
+    "title": "The Ironmist",
+    "type": "Webtoon",
+    "wipe": false,
+    "image": "images/reel-ironmist.jpg",
+    "fan": []
+  }
+]

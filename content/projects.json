@@ -1,0 +1,519 @@
+[
+  {
+    "title": "The New Frontier",
+    "category": "covers",
+    "type": "Book cover",
+    "year": "",
+    "image": "images/new-frontier.jpg",
+    "tags": [
+      "book cover",
+      "fantasy"
+    ],
+    "description": "Cover for a seafaring fantasy: a captain, a chained werewolf and an elf scholar on the deck of their ship.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Wish Upon the Stars, Book 12",
+    "category": "covers",
+    "type": "Book cover",
+    "year": "",
+    "image": "images/wish-12.jpg",
+    "tags": [
+      "book cover",
+      "litrpg",
+      "series"
+    ],
+    "description": "LitRPG series cover: a young hero points at a molten core pouring lava inside a giant crater.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Wish Upon the Stars, Book 13",
+    "category": "covers",
+    "type": "Book cover",
+    "year": "",
+    "image": "images/wish-13.jpg",
+    "tags": [
+      "book cover",
+      "litrpg",
+      "series"
+    ],
+    "description": "LitRPG series cover: an elven archer takes aim at a red castle beneath a storm of bats.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Dusklander",
+    "category": "games",
+    "type": "Steam capsule art",
+    "year": "",
+    "image": "images/dusklander.jpg",
+    "tags": [
+      "game art",
+      "steam",
+      "key art"
+    ],
+    "description": "Key art for Dusklander on Steam: an axe-wielding wanderer by a campfire while red eyes watch from the dark forest.",
+    "story": "",
+    "hidden": false,
+    "formats": [
+      {
+        "image": "images/dusklander.jpg",
+        "label": "Vertical capsule",
+        "note": "600 × 900"
+      },
+      {
+        "image": "images/dusklander-portrait.jpg",
+        "label": "Portrait capsule",
+        "note": "748 × 896"
+      },
+      {
+        "image": "images/dusklander-wide.jpg",
+        "label": "Wide capsule",
+        "note": "1920 × 1080"
+      }
+    ],
+    "process": []
+  },
+  {
+    "title": "The Dark King",
+    "category": "covers",
+    "type": "Full cover",
+    "year": "",
+    "image": "images/dark-king.jpg",
+    "tags": [
+      "book cover",
+      "dark fantasy"
+    ],
+    "description": "Full cover for a dark fantasy novel: a lone king walking out of a burning red citadel.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Wild West",
+    "category": "worlds",
+    "type": "Full cover illustration",
+    "year": "",
+    "image": "images/wild-west.jpg",
+    "tags": [
+      "environment",
+      "western"
+    ],
+    "description": "Desert landscape at sunset, painted as a full wrap cover: red mesas, cacti, a tumbleweed and a bleached bull skull.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Lantern Tree",
+    "category": "worlds",
+    "type": "Destination Wilds",
+    "year": "",
+    "image": "images/dw-lantern-tree.jpg",
+    "tags": [
+      "destination wilds",
+      "environment"
+    ],
+    "description": "A giant tree full of glowing homes under a starry sky. Part of Destination Wilds, an original world of small travellers and giant landscapes.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Sword Peak",
+    "category": "worlds",
+    "type": "Destination Wilds",
+    "year": "",
+    "image": "images/dw-sword-peak.jpg",
+    "tags": [
+      "destination wilds",
+      "environment"
+    ],
+    "description": "Two small travellers look up at a giant sword driven into a mountain. Part of Destination Wilds, an original world of small travellers and giant landscapes.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "The Colossus",
+    "category": "worlds",
+    "type": "Destination Wilds",
+    "year": "",
+    "image": "images/dw-colossus.jpg",
+    "tags": [
+      "destination wilds",
+      "environment"
+    ],
+    "description": "A headless stone giant in a canyon, with a waterfall pouring from its chest. Part of Destination Wilds, an original world of small travellers and giant landscapes.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Island Temple",
+    "category": "worlds",
+    "type": "Destination Wilds",
+    "year": "",
+    "image": "images/dw-island-temple.jpg",
+    "tags": [
+      "destination wilds",
+      "environment"
+    ],
+    "description": "Two travellers row toward an overgrown temple on a misty tropical island. Part of Destination Wilds, an original world of small travellers and giant landscapes.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Mushroom Forest",
+    "category": "worlds",
+    "type": "Destination Wilds",
+    "year": "",
+    "image": "images/dw-mushroom-forest.jpg",
+    "tags": [
+      "destination wilds",
+      "environment"
+    ],
+    "description": "A path through a forest of towering mushrooms wrapped in fog. Part of Destination Wilds, an original world of small travellers and giant landscapes.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Dual Wielding: Ash & Ember",
+    "category": "covers",
+    "type": "Book cover",
+    "year": "",
+    "image": "images/dual-wielding.jpg",
+    "tags": [
+      "book cover",
+      "fantasy"
+    ],
+    "description": "Fantasy cover: two travellers stand back to back on a misty mountain meadow, with dragons circling the peaks.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Min-Maxing the Apocalypse, Book 1",
+    "category": "covers",
+    "type": "Book cover",
+    "year": "",
+    "image": "images/min-maxing-1.jpg",
+    "tags": [
+      "book cover",
+      "litrpg",
+      "series"
+    ],
+    "description": "LitRPG series cover: a hero raises twin glowing daggers toward a lone peak under an aurora sky.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Min-Maxing the Apocalypse, Book 2",
+    "category": "covers",
+    "type": "Book cover",
+    "year": "",
+    "image": "images/min-maxing-2.jpg",
+    "tags": [
+      "book cover",
+      "litrpg"
+    ],
+    "description": "LitRPG cover: a swordsman stands before a giant glowing blue gate in a blood-red wasteland.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Min-Maxing the Apocalypse, Book 3",
+    "category": "covers",
+    "type": "Book cover",
+    "year": "",
+    "image": "images/min-maxing-3.jpg",
+    "tags": [
+      "book cover",
+      "litrpg",
+      "series"
+    ],
+    "description": "LitRPG series cover: a sailor at the bow faces a glowing sea monster rising from the waves.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Les Bagues du Temps",
+    "category": "covers",
+    "type": "Book cover",
+    "year": "",
+    "image": "images/les-bagues.jpg",
+    "tags": [
+      "book cover",
+      "young adult"
+    ],
+    "description": "Cover for a French young adult novel: five friends in a narrow alley lit by golden evening light.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Sword and Stones",
+    "category": "covers",
+    "type": "Full wrap cover",
+    "year": "",
+    "image": "images/sword-and-stones.jpg",
+    "tags": [
+      "book cover",
+      "full wrap"
+    ],
+    "description": "Full wrap cover with a band of heroes and a dragon above a glowing blade.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "The Boyfriend Experience",
+    "category": "covers",
+    "type": "Graphic novel cover",
+    "year": "",
+    "image": "images/boyfriend-experience.jpg",
+    "tags": [
+      "cover",
+      "graphic novel"
+    ],
+    "description": "Graphic novel cover in a bold magenta palette.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "BlackVeins",
+    "category": "worlds",
+    "type": "Apocalypse world building",
+    "year": "",
+    "image": "images/blackveins.jpg",
+    "tags": [
+      "character",
+      "world building"
+    ],
+    "description": "Character study for BlackVeins, an original post-apocalyptic world.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "DarkRE: Shadows of Nekrom",
+    "category": "covers",
+    "type": "Book cover",
+    "year": "",
+    "image": "images/darkre.jpg",
+    "tags": [
+      "book cover",
+      "dark fantasy"
+    ],
+    "description": "Dark fantasy cover: a swordswoman and an armoured knight in a dim corridor under the words Time is Dead.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Children of Nemia",
+    "category": "covers",
+    "type": "Book cover",
+    "year": "",
+    "image": "images/children-of-nemia.jpg",
+    "tags": [
+      "book cover",
+      "fantasy"
+    ],
+    "description": "Fantasy cover: two young adventurers run through a misty forest hung with prayer flags.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "World Map",
+    "category": "games",
+    "type": "Board game illustration",
+    "year": "",
+    "image": "images/bg-world-map.jpg",
+    "tags": [
+      "board game",
+      "map"
+    ],
+    "description": "Painted map of a walled city in a river valley, ringed by farmland, mountains and ruins. Illustration for an upcoming board game. More details will follow once the game is announced.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Gold Dragon",
+    "category": "games",
+    "type": "Board game illustration",
+    "year": "",
+    "image": "images/bg-gold-dragon.jpg",
+    "tags": [
+      "board game",
+      "dragon"
+    ],
+    "description": "A golden dragon resting on its hoard. Illustration for an upcoming board game. More details will follow once the game is announced.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Red Dragon",
+    "category": "games",
+    "type": "Board game illustration",
+    "year": "",
+    "image": "images/bg-red-dragon.jpg",
+    "tags": [
+      "board game",
+      "dragon"
+    ],
+    "description": "A well-fed red dragon at a feast table. Illustration for an upcoming board game. More details will follow once the game is announced.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Green Dragon",
+    "category": "games",
+    "type": "Board game illustration",
+    "year": "",
+    "image": "images/bg-green-dragon.jpg",
+    "tags": [
+      "board game",
+      "dragon"
+    ],
+    "description": "A green dragon in a forest workshop of potions and spellbooks. Illustration for an upcoming board game. More details will follow once the game is announced.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Blue Dragon",
+    "category": "games",
+    "type": "Board game illustration",
+    "year": "",
+    "image": "images/bg-blue-dragon.jpg",
+    "tags": [
+      "board game",
+      "dragon"
+    ],
+    "description": "A blue dragon held in a dungeon by heavy chains. Illustration for an upcoming board game. More details will follow once the game is announced.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Rumah Singgah",
+    "category": "covers",
+    "type": "Full wrap cover",
+    "year": "",
+    "image": "images/rumah-singgah.jpg",
+    "tags": [
+      "book cover",
+      "horror"
+    ],
+    "description": "Horror cover: an abandoned house at night and a figure waiting on the path.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "World of Kala",
+    "category": "worlds",
+    "type": "Original IP",
+    "year": "",
+    "image": "images/world-of-kala.jpg",
+    "tags": [
+      "world building",
+      "environment"
+    ],
+    "description": "Environment key art for World of Kala, a fantasy world built in-house at the studio.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "The Malay Mysteries",
+    "category": "comics",
+    "type": "Comic",
+    "year": "",
+    "image": "images/malay-mysteries.jpg",
+    "tags": [
+      "comic",
+      "black & white"
+    ],
+    "description": "Comic pages set in a crowded Malay market.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "The Ironmist",
+    "category": "comics",
+    "type": "Webtoon",
+    "year": "",
+    "image": "images/ironmist.jpg",
+    "tags": [
+      "webtoon",
+      "fantasy"
+    ],
+    "description": "Cover art for The Ironmist, a fantasy webtoon of overgrown ruins and old stone arches.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  },
+  {
+    "title": "Skyjinn Chronicles",
+    "category": "comics",
+    "type": "Webtoon",
+    "year": "2016",
+    "image": "images/skyjinn-chronicles.jpg",
+    "tags": [
+      "webtoon",
+      "original ip"
+    ],
+    "description": "One of the studio's first original webtoons.",
+    "story": "",
+    "hidden": false,
+    "formats": [],
+    "process": []
+  }
+]
