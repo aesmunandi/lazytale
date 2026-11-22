@@ -1,5 +1,73 @@
-<title>Lazy Tale Studio</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>
+/* Keep the same light/dark mode when moving between pages (runs before the page paints).
+   The current mode travels with the link (?m=light / ?m=dark), with browser storage as a backup. */
+(function(){
+  var root = document.documentElement, t = null;
+  try { t = localStorage.getItem("lt-theme"); } catch(e){}
+  if (t !== "dark" && t !== "light") { var m = /[?&]m=(dark|light)\b/.exec(location.search); t = m ? m[1] : null; }
+  if (t !== "dark" && t !== "light") { try { t = sessionStorage.getItem("lt-mode"); } catch(e){} }
+  if (t === "dark" || t === "light") root.setAttribute("data-theme", t);
+  function current(){
+    var a = root.getAttribute("data-theme");
+    if (a === "dark" || a === "light") return a;
+    return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest("a[href]"); if (!a) return;
+    var h = a.getAttribute("href"); if (!/^(index|contact)\.html/.test(h)) return;
+    var hash = h.indexOf("#") > -1 ? h.slice(h.indexOf("#")) : "", base = h.split("#")[0].split("?")[0];
+    a.setAttribute("href", base + "?m=" + current() + hash);
+  }, true);
+})();
+/* Header: shadow after scrolling, sliding dot under the menu, mobile menu. */
+window.addEventListener("scroll", function(){ var h = document.querySelector("header.site"); if (h) h.classList.toggle("scrolled", scrollY > 100); }, {passive:true});
+document.addEventListener("DOMContentLoaded", function(){
+  var h = document.querySelector("header.site"); if (!h) return;
+  h.classList.toggle("scrolled", scrollY > 100);
+  var list = h.querySelector("[data-nav-list]"), dot = list && list.querySelector(".dot");
+  if (list && dot) {
+    var links = [].slice.call(list.querySelectorAll("[data-nav-link]"));
+    var current = links.filter(function(a){ return a.hasAttribute("aria-current"); })[0] || null, hover = null, shown = false;
+    function place(){
+      var a = hover || current;
+      if (!a) { dot.style.transitionProperty = "opacity"; dot.style.opacity = "0"; shown = false; return; }
+      var r = a.getBoundingClientRect(), g = list.getBoundingClientRect();
+      dot.style.transitionProperty = shown ? "left, opacity" : "opacity";
+      dot.style.left = (r.left - g.left + r.width / 2) + "px"; dot.style.opacity = "1"; shown = true;
+    }
+    links.forEach(function(a){ a.addEventListener("mouseenter", function(){ hover = a; place(); }); });
+    list.addEventListener("mouseleave", function(){ hover = null; place(); });
+    addEventListener("resize", place); place();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(place);
+  }
+  var burger = document.getElementById("burger"), drawer = document.getElementById("drawer");
+  if (burger && drawer) {
+    var open = false;
+    function setOpen(v){
+      open = v; burger.setAttribute("aria-expanded", String(v)); burger.setAttribute("aria-label", v ? "Close menu" : "Open menu");
+      drawer.style.height = v ? drawer.firstElementChild.scrollHeight + "px" : "0px";
+    }
+    burger.addEventListener("click", function(){ setOpen(!open); });
+    drawer.addEventListener("click", function(e){ if (e.target.closest("a")) setOpen(false); });
+  }
+  var t2 = document.getElementById("theme2"), t1 = document.getElementById("theme");
+  if (t1 && t2) t2.addEventListener("click", function(){ t1.click(); });
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lazy Tale Studio | Book Covers, TTRPG & Game Illustration</title>
+<meta name="description" content="Lazy Tale is an illustration studio for custom book covers, TTRPG and game art, comics and world building.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="Lazy Tale Studio">
+<meta property="og:description" content="Carefully crafting stories through visuals. From book covers to game art and tabletop worlds, we paint the moments readers and players remember.">
+<meta property="og:image" content="https://lazytalestudio.com/images/world-of-kala-wide.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
@@ -8,34 +76,37 @@
    one full-bleed banner as the single hero focus, a masonry wall of work at natural ratios,
    then services, a personal note from Aes, FAQ and a rounded contact panel. Light + dark. */
 :root{
-  --bg:#f6f6f1;
-  --surface:#ffffff;
-  --soft:rgba(28,29,23,.055);
-  --line:rgba(28,29,23,.11);
-  --fg:#1c1d17;
-  --muted:#66675d;
+  --bg:#ffffff;            /* pure white page, like WOBL */
+  --surface:#f5f5f5;       /* neutral light-grey panels and cards */
+  --soft:rgba(0,0,0,.045);
+  --line:#e5e5e5;
+  --fg:#0a0a0a;
+  --muted:#737373;
   --accent:#5c6600;        /* olive: Lazy Tale's neon, darkened so it reads on light */
   --neon:#e0f11f;          /* brand neon, used as a fill with dark text on it */
   --on-neon:#1a1a12;
-  --nav:rgba(255,255,255,.78);
-  --btn-bg:#1c1d17; --btn-fg:#ffffff; --btn-ic:#e0f11f; --btn-ic-fg:#1a1a12;
-  --shadow:0 1px 2px rgba(28,29,23,.06),0 8px 24px rgba(28,29,23,.06);
+  --nav:#ffffff;
+  --btn-bg:#0a0a0a; --btn-fg:#ffffff; --btn-ic:#e0f11f; --btn-ic-fg:#1a1a12;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.06);
   --f-mark:"Big Shoulders Display","Oswald",Impact,"Arial Narrow",sans-serif;
   --f-body:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --gut:clamp(16px,3.2vw,48px);
+  --gut:clamp(20px,3.9vw,56px);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#141414;--surface:#1d1d1d;--soft:rgba(255,255,255,.06);--line:rgba(255,255,255,.1);
-  --fg:#f0f0f0;--muted:#9b9b95;--accent:#e0f11f;--nav:rgba(29,29,29,.78);
+  --fg:#f0f0f0;--muted:#9b9b95;--accent:#e0f11f;--nav:#0e0e0e;
   --btn-bg:#e0f11f;--btn-fg:#1a1a12;--btn-ic:#1a1a12;--btn-ic-fg:#e0f11f;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#141414;--surface:#1d1d1d;--soft:rgba(255,255,255,.06);--line:rgba(255,255,255,.1);
-  --fg:#f0f0f0;--muted:#9b9b95;--accent:#e0f11f;--nav:rgba(29,29,29,.78);
+  --fg:#f0f0f0;--muted:#9b9b95;--accent:#e0f11f;--nav:#0e0e0e;
   --btn-bg:#e0f11f;--btn-fg:#1a1a12;--btn-ic:#1a1a12;--btn-ic-fg:#e0f11f;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);color-scheme:dark}
 
 *{box-sizing:border-box}
+html,body{margin:0;padding:0}
+[hidden]{display:none!important}
+section[id],footer[id]{scroll-margin-top:84px}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--bg)}
@@ -50,36 +121,59 @@ h2{font-size:clamp(32px,4vw,52px);font-weight:600;letter-spacing:-.03em;line-hei
 .lead{color:var(--muted);font-size:18px;max-width:58ch;margin:14px 0 0}
 .hl{color:var(--accent)}
 
-/* ---------- header: logo | menu | actions ---------- */
-header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--nav);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-header.site .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-block:12px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:-.01em;justify-self:start}
-.logo img{width:34px;height:34px}
-.logo small{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.04em;line-height:1.1}
-.menu{display:flex;gap:2px;background:var(--soft);border-radius:999px;padding:4px}
-.menu a{padding:8px 16px;border-radius:999px;font-size:15px;font-weight:500;color:var(--muted);transition:background .25s,color .25s}
-.menu a:hover{color:var(--fg);background:var(--surface)}
+/* ---------- header: logo | menu | actions (WOBL-style) ---------- */
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--nav);transition:box-shadow .3s cubic-bezier(.4,0,.2,1)}
+header.site.scrolled{box-shadow:0 8px 24px -12px rgba(30,30,30,.18)}
+:root[data-theme="dark"] header.site.scrolled,[data-mode="dark"] header.site.scrolled{box-shadow:0 8px 24px -12px rgba(0,0,0,.7)}
+header.site .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-block:10px;padding-left:max(clamp(20px,3.9vw,56px),env(safe-area-inset-left,0px));padding-right:max(clamp(20px,3.9vw,56px),env(safe-area-inset-right,0px))}
+.logo{display:flex;align-items:center;justify-self:start;padding:2px 4px;border-radius:12px}
+.logo img{height:44px;width:auto;transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
+.logo:hover img{transform:rotate(-6deg) scale(1.06)}
+[data-mode="dark"] .logo img{filter:drop-shadow(0 0 .6px #fff) drop-shadow(0 0 .6px #fff) drop-shadow(0 0 8px rgba(224,241,31,.35))}
+.menu{position:relative;display:flex;align-items:center;gap:20px}
+.menu a{display:flex;align-items:center;padding:8px;border-radius:8px;font-size:16px;font-weight:500;color:var(--fg);transition:opacity .25s}
+.menu .dot{position:absolute;bottom:-1px;left:0;width:16px;height:4px;border-radius:999px;background:var(--accent);transform:translateX(-50%);opacity:0;pointer-events:none;transition:opacity .3s cubic-bezier(.4,0,.2,1)}
 .actions{display:flex;align-items:center;gap:8px;justify-self:end}
-.icon-btn{width:42px;height:42px;display:grid;place-items:center;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;transition:background .25s}
-.icon-btn:hover{background:var(--soft)}
-.icon-btn svg{width:18px;height:18px}
+.icon-btn{width:48px;height:48px;display:grid;place-items:center;border-radius:999px;border:1px solid color-mix(in srgb,var(--fg) 15%,transparent);background:var(--nav);color:var(--fg);cursor:pointer;transition:border-color .3s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.icon-btn:hover{border-color:color-mix(in srgb,var(--fg) 40%,transparent)}
+.icon-btn:active{transform:scale(.88)}
+.icon-btn svg{width:20px;height:20px}
 .theme .moon,[data-mode="dark"] .theme .sun{display:none}
 [data-mode="dark"] .theme .moon{display:block}
-/* WOBL-style CTA: pill with a round arrow badge that turns on hover */
+/* WOBL-style CTA: text pill + round arrow that turns on hover */
+.cta2{display:inline-flex;align-items:center;font-weight:500;font-size:16px;color:var(--btn-fg);white-space:nowrap}
+.cta2 .lbl{display:inline-flex;align-items:center;height:48px;padding:0 24px;border-radius:999px;background:var(--btn-bg);transform:translateX(8px);transition:transform .3s cubic-bezier(.4,0,.2,1)}
+.cta2 .arr{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:999px;background:var(--btn-bg);transition:transform .3s cubic-bezier(.4,0,.2,1)}
+.cta2 .arr svg{width:14px;height:14px}
+.cta2:hover .lbl{transform:translateX(-4px)}
+.cta2:hover .arr{transform:rotate(45deg)}
+/* round-arrow pill used elsewhere on the page */
 .cta{display:inline-flex;align-items:center;gap:10px;background:var(--btn-bg);color:var(--btn-fg);font-weight:600;font-size:15px;border-radius:999px;padding:5px 16px 5px 5px;white-space:nowrap;transition:transform .3s cubic-bezier(.3,1.4,.5,1)}
 .cta i{width:32px;height:32px;border-radius:999px;background:var(--btn-ic);color:var(--btn-ic-fg);display:grid;place-items:center;transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
 .cta i svg{width:16px;height:16px}
 .cta:hover i{transform:rotate(-45deg)}
 .cta:active{transform:scale(.97)}
+/* mobile: logo + menu button; the menu drops down with large links */
 .burger{display:none}
-.drawer{border-top:1px solid var(--line);padding-block:8px 16px}
-.drawer a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:18px;font-weight:500}
+.burger .bars{position:relative;width:20px;height:14px}
+.burger .bars span{position:absolute;left:0;width:100%;height:2px;border-radius:2px;background:currentColor;transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .2s,top .35s cubic-bezier(.4,0,.2,1)}
+.burger .bars span:nth-child(1){top:0}.burger .bars span:nth-child(2){top:6px}.burger .bars span:nth-child(3){top:12px}
+.burger[aria-expanded="true"] .bars span:nth-child(1){top:6px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] .bars span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] .bars span:nth-child(3){top:6px;transform:rotate(-45deg)}
+.drawer{display:none;height:0;overflow:hidden;background:var(--nav);transition:height .5s cubic-bezier(.4,0,.2,1)}
+.drawer .inner{display:flex;flex-direction:column;padding-block:12px 28px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.drawer .inner>a{display:flex;align-items:center;gap:10px;padding:18px 0;border-bottom:1px solid var(--line);font-size:30px;font-weight:500;letter-spacing:-.02em;color:var(--fg)}
+.drawer .inner>a::before{content:"";width:6px;height:6px;border-radius:999px;background:var(--accent);transform:scale(0);transition:transform .3s}
+.drawer .inner>a[aria-current="page"]{color:var(--accent)}
+.drawer .inner>a[aria-current="page"]::before,.drawer .inner>a:hover::before{transform:scale(1)}
+.drawer .foot{display:flex;align-items:center;gap:10px;margin-top:26px}
 @media (max-width:900px){
   header.site .in{grid-template-columns:1fr auto}
-  .menu{display:none}.burger{display:grid}
-  .logo small{display:none}
+  .menu,.actions .theme,.actions .cta2{display:none}
+  .burger{display:grid}
+  .drawer{display:block}
 }
-@media (max-width:420px){.cta span{display:none}.cta{padding:5px}}
 
 /* ---------- hero showreel (plays by itself, like a studio reel) ---------- */
 .hero{position:relative;height:clamp(500px,calc(100svh - 72px),920px);overflow:hidden;background:#0d0f0a;color:#fff;isolation:isolate}
@@ -114,7 +208,7 @@ header.site .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:cent
 .seg button:active{transform:scale(.95)}
 .float-seg{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:25;transform:translate(-50%,140%);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .35s;max-width:calc(100vw - 32px)}
 .float-seg.show{transform:translate(-50%,0);opacity:1;pointer-events:auto}
-.float-seg .seg{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;background:var(--nav);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.18);border-radius:999px;max-width:100%}
+.float-seg .seg{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;background:var(--nav);border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.18);border-radius:999px;max-width:100%}
 .float-seg .seg::-webkit-scrollbar{display:none}
 .float-seg .seg button{white-space:nowrap;flex:none}
 #work-title .cat{color:var(--accent)}
@@ -164,7 +258,14 @@ header.site .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:cent
 .svc .ex{margin-top:auto;padding-top:8px;font-size:14px;color:var(--accent);font-weight:500}
 
 /* ---------- about ---------- */
-.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,80px);align-items:center}
+.about{display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,56px)}
+.about .pic{background:#fff}
+.about .txt{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:12px clamp(28px,5vw,80px);align-items:end}
+.about .txt .eyebrow{grid-column:1/-1}
+.about .txt .note{margin:0;max-width:40ch}
+.about .txt .side{display:grid;gap:18px;justify-items:start}
+.about .txt .side .b{margin:0}
+@media (max-width:860px){.about .txt{grid-template-columns:1fr}}
 .about .pic{border-radius:28px;overflow:hidden;position:relative}
 .about .pic img{width:100%}
 .about .pic .tag{position:absolute;left:16px;bottom:16px;background:var(--neon);color:var(--on-neon);font-size:13px;font-weight:600;border-radius:999px;padding:6px 14px}
@@ -179,7 +280,7 @@ header.site .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:cent
 .steps b{display:block;color:var(--accent);font-weight:600;font-size:13px;font-variant-numeric:tabular-nums}
 .steps strong{display:block;font-weight:600;margin:4px 0 2px}
 .steps span{font-size:14px;color:var(--muted);line-height:1.45;display:block}
-@media (max-width:1000px){.about{grid-template-columns:1fr}.about .pic{max-width:520px}}
+
 @media (max-width:560px){.steps{grid-template-columns:1fr 1fr}}
 
 /* ---------- faq ---------- */
@@ -261,29 +362,40 @@ dialog:focus,dialog:focus-visible,.sheet:focus,.sheet:focus-visible{outline:none
 @media (max-width:760px){.cs-intro{grid-template-columns:1fr;gap:24px}.proc{grid-template-columns:1fr 1fr}.crops{grid-template-columns:1fr 1fr}.crops div:nth-child(3){display:none}.sheet{height:92vh;border-radius:22px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
+</head>
+<body>
 
 <header class="site">
-  <div class="in g">
+  <div class="in">
     <a class="logo" href="#top" aria-label="Lazy Tale Studio, home">
-      <img src="images/logo.png" alt="" width="34" height="34">
-      <span>Lazy Tale<small>Illustration Studio</small></span>
+      <img src="cat-logo.png" alt="Lazy Tale Studio" width="33" height="44">
     </a>
-    <nav class="menu" aria-label="Main">
-      <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#faq">FAQ</a>
+    <nav class="menu" aria-label="Main" data-nav-list>
+      <a href="#work" data-nav-link>Work</a><a href="#services" data-nav-link>Services</a><a href="#about" data-nav-link>About</a><a href="#faq" data-nav-link>FAQ</a><a href="contact.html" data-nav-link>Contact</a>
+      <span class="dot" aria-hidden="true"></span>
     </nav>
     <div class="actions">
       <button class="icon-btn theme" type="button" id="theme" aria-label="Switch light or dark mode">
-        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
-      <button class="icon-btn burger" type="button" id="burger" aria-label="Open menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+      <a class="cta2" href="contact.html"><span class="lbl">Start a Project</span><span class="arr" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path d="M1.9 11.43L11.43 1.9M11.43 11.43V1.9H1.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <button class="icon-btn burger" type="button" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
       </button>
-      <a class="cta" href="#contact"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><span>Start a Project</span></a>
     </div>
   </div>
-  <nav class="drawer g" id="drawer" hidden aria-label="Mobile">
-    <a href="#work">Work <span>→</span></a><a href="#services">Services <span>→</span></a><a href="#about">About <span>→</span></a><a href="#faq">FAQ <span>→</span></a>
+  <nav class="drawer" id="drawer" aria-label="Mobile">
+    <div class="inner">
+      <a href="#work" data-nav-link>Work</a><a href="#services" data-nav-link>Services</a><a href="#about" data-nav-link>About</a><a href="#faq" data-nav-link>FAQ</a><a href="contact.html" data-nav-link>Contact</a>
+      <div class="foot">
+        <a class="cta2" href="contact.html"><span class="lbl">Start a Project</span><span class="arr" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><path d="M1.9 11.43L11.43 1.9M11.43 11.43V1.9H1.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <button class="icon-btn theme" type="button" id="theme2" aria-label="Switch light or dark mode">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+      </div>
+    </div>
   </nav>
 </header>
 
@@ -294,9 +406,9 @@ dialog:focus,dialog:focus-visible,.sheet:focus,.sheet:focus-visible{outline:none
     <div class="shade"></div>
     <div class="copy g">
       <div>
-        <div class="eyebrow">Illustration studio · Indonesia · Since 2015</div>
+        <div class="eyebrow">Illustration Studio &middot; Est. 2018</div>
         <h1>Lazy Tale Studio</h1>
-        <p>Lazy in name, never in craft. We paint book covers, draw comics and build whole worlds for fantasy and sci-fi stories.</p>
+        <p>Carefully crafting stories through visuals. From book covers to game art and tabletop worlds, we paint the moments readers and players remember.</p>
       </div>
       <span class="cap" id="cap" aria-hidden="true"><b>World of Kala</b> Original IP</span>
     </div>
@@ -349,20 +461,15 @@ dialog:focus,dialog:focus-visible,.sheet:focus,.sheet:focus-visible{outline:none
   <section class="section g" id="about">
     <div class="about">
       <div class="pic rise">
-        <img src="images/ironmist.jpg" alt="The Ironmist: a figure under old stone arches overgrown with vines" loading="lazy">
-        <span class="tag">From The Ironmist</span>
+        <img src="about-studio.jpg" alt="A crowd of illustrated characters in costumes, armour and everyday clothes, side by side" width="2000" height="664" loading="lazy">
       </div>
-      <div>
+      <div class="txt">
         <div class="eyebrow">About the studio</div>
-        <p class="note">Hi! I'm Aes, the illustrator behind Lazy Tale. I've been drawing stories since 2015, and I started this studio so every story can get the cover and the world it deserves.</p>
-        <p class="b">Today we work with authors, small presses and creators around the world, all from Indonesia. We keep a small number of projects at a time, so each one gets real attention.</p>
-        <div class="sign"><img src="images/logo.png" alt="" width="44" height="44"><div><b>Aes Munandi</b><span>Founder &amp; lead illustrator</span></div></div>
-        <ol class="steps">
-          <li><b>01</b><strong>Brief</strong><span>Tell us the story, format and deadline.</span></li>
-          <li><b>02</b><strong>Sketches</strong><span>Pick your favourite of a few ideas.</span></li>
-          <li><b>03</b><strong>Painting</strong><span>Full colour, with your notes along the way.</span></li>
-          <li><b>04</b><strong>Delivery</strong><span>Print and web files, ready to publish.</span></li>
-        </ol>
+        <p class="note">Lazy Tale is an illustration studio for stories. Since 2018 we've painted custom book covers, TTRPG and game art, comics and whole worlds for authors, publishers and game makers.</p>
+        <div class="side">
+        <p class="b">Lazy in name, never in craft. Every piece is drawn by hand, from the first sketch to the final file.</p>
+        <a class="cta" href="contact.html"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><span>See how we work</span></a>
+        </div>
       </div>
     </div>
   </section>
@@ -389,6 +496,7 @@ dialog:focus,dialog:focus-visible,.sheet:focus,.sheet:focus-visible{outline:none
         <div>
           <div class="eyebrow">Start a project</div>
           <h2 style="margin-top:12px">Got a story?<br><span class="hl">Let's draw it.</span></h2>
+          <a class="cta" href="contact.html" style="margin-top:26px"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><span>Start a Project</span></a>
           <div class="mailrow"><span id="addr">aesmunandi@gmail.com</span><button type="button" id="copy">Copy</button></div>
           <div class="meta">Or find us on Discord: aesmunandi</div>
         </div>
@@ -396,6 +504,7 @@ dialog:focus,dialog:focus-visible,.sheet:focus,.sheet:focus-visible{outline:none
           <a href="#work">Work <span>→</span></a>
           <a href="#services">Services <span>→</span></a>
           <a href="#about">About <span>→</span></a>
+          <a href="contact.html">Contact <span>→</span></a>
           <a href="https://www.instagram.com/aesmunandi/" target="_blank" rel="noopener">Instagram <span>↗</span></a>
         </div>
       </div>
@@ -514,8 +623,9 @@ function pick(k, fromFloat){
   setTimeout(() => {
     renderTitle(); renderGrid(); titleEl.classList.remove("swap");
     if (fromFloat){
-      const y = document.getElementById("work").getBoundingClientRect().top + scrollY - 70;
-      scrollTo({top:y, behavior: calmMotion ? "auto" : "smooth"});
+      const head = document.querySelector("header.site").offsetHeight;
+      const y = grid.getBoundingClientRect().top + scrollY - head - 20;
+      if (scrollY > y) scrollTo({top:y, behavior: calmMotion ? "auto" : "smooth"});
     }
     requestAnimationFrame(() => { grid.classList.remove("out"); reveal(true); });
   }, calmMotion ? 0 : 230);
@@ -654,7 +764,7 @@ document.addEventListener("visibilitychange", () => document.hidden ? stop() : s
 /* light / dark mode */
 const root = document.documentElement, mq = matchMedia("(prefers-color-scheme: dark)");
 function mode(){ const t = root.getAttribute("data-theme"); return t === "dark" || t === "light" ? t : (mq.matches ? "dark" : "light"); }
-function sync(){ document.body.dataset.mode = mode(); }
+function sync(){ const m = mode(); document.body.dataset.mode = m; try { sessionStorage.setItem("lt-mode", m); } catch(e){} }
 const saved = store.get("lt-theme"); if (saved === "dark" || saved === "light") root.setAttribute("data-theme", saved);
 document.getElementById("theme").addEventListener("click", () => {
   const next = mode() === "dark" ? "light" : "dark";
@@ -663,10 +773,6 @@ document.getElementById("theme").addEventListener("click", () => {
 mq.addEventListener("change", sync);
 new MutationObserver(sync).observe(root, {attributes:true, attributeFilter:["data-theme"]});
 
-/* mobile menu */
-const burger = document.getElementById("burger"), drawer = document.getElementById("drawer");
-burger.addEventListener("click", () => { drawer.hidden = !drawer.hidden; burger.setAttribute("aria-expanded", String(!drawer.hidden)); });
-drawer.addEventListener("click", e => { if (e.target.closest("a")) { drawer.hidden = true; burger.setAttribute("aria-expanded","false"); } });
 
 /* copy email */
 document.getElementById("copy").addEventListener("click", async e => {
@@ -678,3 +784,5 @@ document.getElementById("copy").addEventListener("click", async e => {
 
 sync(); renderFilters(); renderTitle(); renderGrid();
 </script>
+</body>
+</html>
