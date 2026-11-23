@@ -26,6 +26,15 @@ content:
             - { name: games, label: Game Art }
             - { name: comics, label: Comic & Webtoon }
             - { name: worlds, label: World Building }
+      - name: slug
+        label: Process page address (optional, e.g. sword-and-stones; needed for a full process page)
+        type: string
+      - name: client
+        label: Client (optional)
+        type: string
+      - name: role
+        label: Our role (optional, e.g. Thumbnails, illustration, painting)
+        type: string
       - name: type
         label: Format (e.g. Book cover, Full wrap cover, Webtoon)
         type: string
@@ -64,6 +73,31 @@ content:
           - { name: image, label: Image, type: image }
           - { name: label, label: Step name (e.g. Sketch), type: string }
           - { name: note, label: Note, type: string }
+      - name: case
+        label: Process page sections (optional, e.g. Thumbnails, Sketch to colour, Title)
+        type: object
+        list:
+          collapsible: { collapsed: true, summary: "{title}" }
+        fields:
+          - { name: title, label: Section title, type: string }
+          - { name: text, label: Text, type: text }
+          - name: layout
+            label: Image layout
+            type: select
+            options:
+              values:
+                - { name: row, label: "Row of small images (thumbnails, stages)" }
+                - { name: wide, label: "One big image per row" }
+          - name: images
+            label: Images
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Image, type: image }
+              - { name: label, label: Caption (e.g. Option 1, Sketch), type: string }
+      - { name: link_text, label: "Closing line (optional, e.g. The author wrote about it too.)", type: string }
+      - { name: link_label, label: Closing link text (optional), type: string }
+      - { name: link_url, label: Closing link address (optional), type: string }
       - name: hidden
         label: Hide from website
         type: boolean
