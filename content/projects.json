@@ -277,20 +277,93 @@
     "process": []
   },
   {
-    "title": "Sword and Stones",
+    "title": "Sword & Stones",
+    "slug": "sword-and-stones",
     "category": "covers",
-    "type": "Full wrap cover",
-    "year": "",
+    "type": "Full wrap book cover",
+    "year": "2025",
+    "client": "Kimberly Lynn",
+    "role": "Thumbnails, illustration, painting, title mockups",
     "image": "images/sword-and-stones.jpg",
     "tags": [
       "book cover",
       "full wrap"
     ],
-    "description": "Full wrap cover with a band of heroes and a dragon above a glowing blade.",
-    "story": "",
+    "description": "Full wrap cover with four heroes, a griffin overhead and a sword stuck in glowing stone.",
+    "story": "A full wrap cover for Kimberly Lynn's Sword & Stones: four heroes in a dark cave, a griffin watching from above, and a sword stuck in glowing stone. It's still one of our favourite projects, and a good look at how we work, from rough thumbnails to the finished cover.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "case": [
+      {
+        "title": "Thumbnails",
+        "layout": "row",
+        "text": "Thumbnails are where most of the real decisions happen, for us and for the client. Before any detail goes in, we play with the big things: how close we are to the heroes, how big the griffin feels, how dark the cave gets, and where your eye lands first. Kimberly got five rough options and was free to pick one, or keep the bits she liked from a few of them.",
+        "images": [
+          {
+            "image": "images/case/ss-thumb-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/ss-thumb-2.jpg",
+            "label": "Option 2"
+          },
+          {
+            "image": "images/case/ss-thumb-3.jpg",
+            "label": "Option 3"
+          },
+          {
+            "image": "images/case/ss-thumb-4.jpg",
+            "label": "Option 4"
+          },
+          {
+            "image": "images/case/ss-thumb-5.jpg",
+            "label": "Option 5"
+          }
+        ]
+      },
+      {
+        "title": "Sketch to colour",
+        "layout": "row",
+        "text": "Once the thumbnail was set, we built the painting up one step at a time: a clean sketch, base colours, the light from the sword, then rendering. Kimberly saw every stage before we moved on, so changes stayed small and the final art was never a surprise.",
+        "images": [
+          {
+            "image": "images/case/ss-stage-1.jpg",
+            "label": "Sketch"
+          },
+          {
+            "image": "images/case/ss-stage-2.jpg",
+            "label": "Base colours"
+          },
+          {
+            "image": "images/case/ss-stage-3.jpg",
+            "label": "Light"
+          },
+          {
+            "image": "images/case/ss-stage-4.jpg",
+            "label": "Rendering"
+          },
+          {
+            "image": "images/case/ss-stage-5.jpg",
+            "label": "Final"
+          }
+        ]
+      },
+      {
+        "title": "Making room for the title",
+        "layout": "wide",
+        "text": "Our part on this one was the illustration and painting. But with four characters, a griffin and a busy cave in one frame, the title still needed somewhere to live. So we mocked up a couple of title placements. They're only a guide, but they let Kimberly see the painting as a real, finished book cover early on.",
+        "images": [
+          {
+            "image": "images/case/ss-title-options.jpg",
+            "label": "Two title placement mockups"
+          }
+        ]
+      }
+    ],
+    "link_text": "Kimberly wrote about the cover journey from her side too.",
+    "link_label": "Read The Cover Journey of Swords & Stones",
+    "link_url": "https://www.kimberlylynnhanson.com/the-cover-journey-of-swords-stones/"
   },
   {
     "title": "The Boyfriend Experience",
