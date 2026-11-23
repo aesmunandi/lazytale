@@ -18,9 +18,11 @@
   }
   document.addEventListener("click", function(e){
     var a = e.target.closest && e.target.closest("a[href]"); if (!a) return;
-    var h = a.getAttribute("href"); if (!/^(index|contact)\.html/.test(h)) return;
-    var hash = h.indexOf("#") > -1 ? h.slice(h.indexOf("#")) : "", base = h.split("#")[0].split("?")[0];
-    a.setAttribute("href", base + "?m=" + current() + hash);
+    var h = a.getAttribute("href"); if (!/^(index|contact|project)\.html/.test(h)) return;
+    var hash = h.indexOf("#") > -1 ? h.slice(h.indexOf("#")) : "", path = h.split("#")[0].split("?");
+    var qs = (path[1] || "").split("&").filter(function(x){ return x && !/^m=/.test(x); });
+    qs.push("m=" + current());
+    a.setAttribute("href", path[0] + "?" + qs.join("&") + hash);
   }, true);
 })();
 /* Header: shadow after scrolling, sliding dot under the menu, mobile menu. */
@@ -126,7 +128,8 @@ header.site .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:cent
 .logo{display:flex;align-items:center;justify-self:start;padding:2px 4px;border-radius:12px}
 .logo img{height:44px;width:auto;transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
 .logo:hover img{transform:rotate(-6deg) scale(1.06)}
-[data-mode="dark"] .logo img{filter:drop-shadow(0 0 .6px #fff) drop-shadow(0 0 .6px #fff) drop-shadow(0 0 8px rgba(224,241,31,.35))}
+.logo .dk,[data-mode="dark"] .logo .lt{display:none}
+[data-mode="dark"] .logo .dk{display:block}
 .menu{position:relative;display:flex;align-items:center;gap:20px}
 .menu a{display:flex;align-items:center;padding:8px;border-radius:8px;font-size:16px;font-weight:500;color:var(--fg);transition:opacity .25s}
 .menu .dot{position:absolute;bottom:-1px;left:0;width:16px;height:4px;border-radius:999px;background:var(--accent);transform:translateX(-50%);opacity:0;pointer-events:none;transition:opacity .3s cubic-bezier(.4,0,.2,1)}
@@ -416,6 +419,17 @@ dialog:focus,dialog:focus-visible,.sheet:focus,.sheet:focus-visible{outline:none
 .direct .ig{font-weight:500;font-size:17px}
 .direct .ig:hover{color:var(--accent)}
 @media (max-width:980px){.direct{position:static}}
+.example{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:center;margin-top:16px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:16px clamp(16px,3vw,40px) 16px 16px;transition:transform .35s,box-shadow .35s}
+.example:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.ex-pics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.ex-pics img{width:100%;aspect-ratio:515/797;object-fit:cover;border-radius:12px;background:var(--soft)}
+.ex-txt{display:grid;gap:8px;justify-items:start}
+.ex-txt strong{font-size:clamp(22px,2.4vw,30px);font-weight:600;letter-spacing:-.02em;line-height:1.15}
+.ex-txt span{color:var(--muted);font-size:16px;max-width:44ch}
+.ex-txt em{font-style:normal;font-weight:600;color:var(--accent);margin-top:6px}
+.ex-txt em b{display:inline-block;transition:transform .3s}
+.example:hover .ex-txt em b{transform:translateX(4px)}
+@media (max-width:760px){.example{grid-template-columns:1fr;padding:12px 12px 22px}.ex-txt{padding:0 8px}}
 .mini{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:56px 24px;font-size:14px;color:var(--muted)}
 .mini a:hover{color:var(--accent)}
 
@@ -426,7 +440,7 @@ dialog:focus,dialog:focus-visible,.sheet:focus,.sheet:focus-visible{outline:none
 <header class="site">
   <div class="in">
     <a class="logo" href="index.html#top" aria-label="Lazy Tale Studio, home">
-      <img src="cat-logo.png" alt="Lazy Tale Studio" width="33" height="44">
+      <img class="lt" src="cat-logo.png" alt="Lazy Tale Studio" width="33" height="44"><img class="dk" src="cat-logo-dark.png" alt="Lazy Tale Studio" width="44" height="44">
     </a>
     <nav class="menu" aria-label="Main" data-nav-list>
       <a href="index.html#work" data-nav-link>Work</a><a href="index.html#services" data-nav-link>Services</a><a href="index.html#about" data-nav-link>About</a><a href="index.html#faq" data-nav-link>FAQ</a><a href="contact.html" data-nav-link aria-current="page">Contact</a>
@@ -476,6 +490,17 @@ dialog:focus,dialog:focus-visible,.sheet:focus,.sheet:focus-visible{outline:none
       <li><b>04</b><strong>Painting</strong><span>We paint the final piece and share progress, so you can give notes along the way.</span></li>
       <li><b>05</b><strong>Delivery</strong><span>Print-ready and web files, sized to your printer's or platform's template.</span></li>
     </ol>
+    <a class="example" href="project.html?p=sword-and-stones">
+      <div class="ex-pics" aria-hidden="true">
+        <img src="images/case/ss-thumb-3.jpg" alt="" loading="lazy"><img src="images/case/ss-stage-1.jpg" alt="" loading="lazy"><img src="images/case/ss-stage-3.jpg" alt="" loading="lazy"><img src="images/case/ss-stage-5.jpg" alt="" loading="lazy">
+      </div>
+      <div class="ex-txt">
+        <div class="eyebrow">See a real example</div>
+        <strong>Sword &amp; Stones, step by step</strong>
+        <span>Five rough thumbnails, the painting stage by stage, and the title mockups. The whole process behind one of our covers.</span>
+        <em>See the process <b aria-hidden="true">→</b></em>
+      </div>
+    </a>
   </section>
 
   <section class="c-form g" aria-labelledby="form-title">
@@ -641,8 +666,9 @@ form.addEventListener("submit", async e => {
   const budget = val("budget_mode") === "discuss" ? "Let's discuss first" : (form.budget.value.trim() ? "USD " + form.budget.value.trim() : "Not given");
   const payload = {
     access_key: WEB3FORMS_KEY,
-    subject: `New project brief: ${type} from ${form.name.value.trim()}`,
-    from_name: "Lazy Tale Studio website",
+    subject: `New Project Request: ${type} from ${form.name.value.trim()}`,
+    from_name: "Lazy Tale Studio Website",
+    "Request": "New project request from the lazytalestudio.com contact form",
     replyto: form.email.value.trim(),
     "Name": form.name.value.trim(),
     "Email": form.email.value.trim(),

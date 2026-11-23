@@ -18,9 +18,11 @@
   }
   document.addEventListener("click", function(e){
     var a = e.target.closest && e.target.closest("a[href]"); if (!a) return;
-    var h = a.getAttribute("href"); if (!/^(index|contact)\.html/.test(h)) return;
-    var hash = h.indexOf("#") > -1 ? h.slice(h.indexOf("#")) : "", base = h.split("#")[0].split("?")[0];
-    a.setAttribute("href", base + "?m=" + current() + hash);
+    var h = a.getAttribute("href"); if (!/^(index|contact|project)\.html/.test(h)) return;
+    var hash = h.indexOf("#") > -1 ? h.slice(h.indexOf("#")) : "", path = h.split("#")[0].split("?");
+    var qs = (path[1] || "").split("&").filter(function(x){ return x && !/^m=/.test(x); });
+    qs.push("m=" + current());
+    a.setAttribute("href", path[0] + "?" + qs.join("&") + hash);
   }, true);
 })();
 /* Header: shadow after scrolling, sliding dot under the menu, mobile menu. */
@@ -129,7 +131,8 @@ header.site .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:cent
 .logo{display:flex;align-items:center;justify-self:start;padding:2px 4px;border-radius:12px}
 .logo img{height:44px;width:auto;transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
 .logo:hover img{transform:rotate(-6deg) scale(1.06)}
-[data-mode="dark"] .logo img{filter:drop-shadow(0 0 .6px #fff) drop-shadow(0 0 .6px #fff) drop-shadow(0 0 8px rgba(224,241,31,.35))}
+.logo .dk,[data-mode="dark"] .logo .lt{display:none}
+[data-mode="dark"] .logo .dk{display:block}
 .menu{position:relative;display:flex;align-items:center;gap:20px}
 .menu a{display:flex;align-items:center;padding:8px;border-radius:8px;font-size:16px;font-weight:500;color:var(--fg);transition:opacity .25s}
 .menu .dot{position:absolute;bottom:-1px;left:0;width:16px;height:4px;border-radius:999px;background:var(--accent);transform:translateX(-50%);opacity:0;pointer-events:none;transition:opacity .3s cubic-bezier(.4,0,.2,1)}
@@ -326,6 +329,7 @@ dialog[open]{animation:pop .35s cubic-bezier(.2,.8,.2,1)}
 .cs-intro{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px}
 .cs-intro h3{font-size:clamp(30px,4vw,48px);font-weight:600;letter-spacing:-.03em;line-height:1.05;margin-top:8px}
 .cs-intro p{color:var(--muted);font-size:17px;margin:16px 0 0;max-width:56ch}
+.cs-intro .fullcase{margin-top:22px}
 .cs-meta{display:grid;gap:0;align-content:start;border-top:1px solid var(--line)}
 .cs-meta div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
 .cs-meta dt{color:var(--muted)}
@@ -368,7 +372,7 @@ dialog:focus,dialog:focus-visible,.sheet:focus,.sheet:focus-visible{outline:none
 <header class="site">
   <div class="in">
     <a class="logo" href="#top" aria-label="Lazy Tale Studio, home">
-      <img src="cat-logo.png" alt="Lazy Tale Studio" width="33" height="44">
+      <img class="lt" src="cat-logo.png" alt="Lazy Tale Studio" width="33" height="44"><img class="dk" src="cat-logo-dark.png" alt="Lazy Tale Studio" width="44" height="44">
     </a>
     <nav class="menu" aria-label="Main" data-nav-list>
       <a href="#work" data-nav-link>Work</a><a href="#services" data-nav-link>Services</a><a href="#about" data-nav-link>About</a><a href="#faq" data-nav-link>FAQ</a><a href="contact.html" data-nav-link>Contact</a>
@@ -468,7 +472,7 @@ dialog:focus,dialog:focus-visible,.sheet:focus,.sheet:focus-visible{outline:none
         <p class="note">Lazy Tale is an illustration studio for stories. Since 2018 we've painted custom book covers, TTRPG and game art, comics and whole worlds for authors, publishers and game makers.</p>
         <div class="side">
         <p class="b">Lazy in name, never in craft. Every piece is drawn by hand, from the first sketch to the final file.</p>
-        <a class="cta" href="contact.html"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><span>See how we work</span></a>
+        <a class="cta" href="project.html?p=sword-and-stones"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><span>See how we work</span></a>
         </div>
       </div>
     </div>
@@ -543,7 +547,8 @@ const PROJECTS = RAW.filter(p => p && p.image && !p.hidden).map(p => {
     tags:(p.tags || []).filter(Boolean), desc:p.description || "", story:p.story || "",
     gallery: formats.length ? formats.map(f => ({img:f.image, label:f.label || "", note:f.note || ""})) : null,
     cropImg: formats.length ? biggest(formats).image : null,
-    process:(p.process || []).filter(s => s.image).map(s => ({img:s.image, label:s.label || "", note:s.note || ""}))};
+    process:(p.process || []).filter(s => s.image).map(s => ({img:s.image, label:s.label || "", note:s.note || ""})),
+    client:p.client || "", slug:p.slug || "", hasCase:!!(p.slug && (p.case || []).length)};
 });
 const REEL = RAWREEL.filter(r => r && r.image).map(r => {
   const fan = (r.fan || []).filter(Boolean);
@@ -643,7 +648,7 @@ if ("IntersectionObserver" in window){
 /* project detail: a scrollable case-study window */
 /* While true, projects without process images show empty slots so you can see where they go.
    Set to false before launch: then the Process section only appears when a project has images. */
-const SHOW_PROCESS_SLOTS = true;
+const SHOW_PROCESS_SLOTS = false;
 const PROCESS_STEPS = [["Sketch","Thumbnails and composition"],["Colour study","Palette and lighting"],["Rendering","Painting the final details"]];
 const CATNAME = Object.fromEntries(CATS);
 const lb = document.getElementById("lb"), cs = document.getElementById("cs"), sheet = document.getElementById("sheet");
@@ -654,6 +659,7 @@ function show(i){
   const src = IMG[p.id], crops = p.crops || ["30% 22%","62% 48%","40% 82%"];
   const meta = [["Category", CATNAME[p.cat]], ["Format", p.type], p.year && ["Year", p.year], p.client && ["Client", p.client]].filter(Boolean);
   let proc = "";
+  const full = p.hasCase ? `<a class="cta fullcase" href="project.html?p=${encodeURIComponent(p.slug)}"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i><span>See the full process</span></a>` : "";
   if (p.process && p.process.length){
     proc = p.process.map(s => `<figure><div class="ph"><img src="${s.img}" alt="${s.label}" loading="lazy"></div><figcaption>${s.label}<span>${s.note || ""}</span></figcaption></figure>`).join("");
   } else if (SHOW_PROCESS_SLOTS){
@@ -667,6 +673,7 @@ function show(i){
         <h3 id="cs-title">${p.title}</h3>
         <div class="tags" style="margin-top:14px">${p.tags.map(t => `<span>#${t}</span>`).join("")}</div>
         <p>${p.story || p.desc}</p>
+        ${full}
       </div>
       <dl class="cs-meta">${meta.map(([k,v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>
     </div>
