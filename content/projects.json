@@ -1,53 +1,160 @@
 [
   {
     "title": "The New Frontier",
+    "slug": "the-new-frontier",
     "category": "covers",
     "type": "Book cover",
     "year": "",
+    "client": "Michael Goe",
+    "role": "Sketch, illustration, painting, title mockups",
     "image": "images/new-frontier.jpg",
     "tags": [
       "book cover",
       "fantasy"
     ],
     "description": "Cover for a seafaring fantasy: a captain, a chained werewolf and an elf scholar on the deck of their ship.",
-    "story": "",
+    "story": "A cover for Michael Goe's The New Frontier. A sea adventure seen from below: a captain with his arms crossed, an elf holding an old book, and a huge wolf in chains, all standing at the rail under a full sail. We also painted Children of Nemia for Michael.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "case": [
+      {
+        "title": "Sketch to colour",
+        "layout": "row",
+        "text": "For this one we went straight to a detailed sketch. The low camera was there from the start: looking up at the three of them makes them feel like heroes before you know anything about the story. We even scribbled the title in, just to check it had room. From there it was about turning a grey sketch into a bright, sunny day at sea.",
+        "images": [
+          {
+            "image": "images/case/nf-sketch.jpg",
+            "label": "Sketch"
+          },
+          {
+            "image": "images/case/nf-final.jpg",
+            "label": "Final"
+          }
+        ]
+      },
+      {
+        "title": "Where the title lives",
+        "layout": "row",
+        "text": "With so much open sky and sail, the title could sit in more than one place. We tried it up on the sail, and at the bottom over the ship's rail in two different styles, so Michael could pick what felt right for the book. The finished cover puts it on the sail, where it reads like part of the ship.",
+        "images": [
+          {
+            "image": "images/case/nf-final.jpg",
+            "label": "On the sail"
+          },
+          {
+            "image": "images/case/nf-title-2.jpg",
+            "label": "At the bottom, silver"
+          },
+          {
+            "image": "images/case/nf-title-3.jpg",
+            "label": "At the bottom, gold"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Wish Upon the Stars, Book 12",
+    "slug": "wish-upon-the-stars-12",
     "category": "covers",
     "type": "Book cover",
     "year": "",
+    "client": "Malcolm Tent, Timeless Wind Publishing",
+    "role": "Thumbnails, illustration, painting",
     "image": "images/wish-12.jpg",
     "tags": [
       "book cover",
       "litrpg",
       "series"
     ],
-    "description": "LitRPG series cover: a young hero points at a molten core pouring lava inside a giant crater.",
-    "story": "",
+    "description": "LitRPG series cover: a young hero points at a column of lava pouring into a giant crater.",
+    "story": "Book 12 of Wish Upon the Stars, one of four covers we painted for the series, from book 11 to book 14. A young hero stands at the edge of a huge crater and points at a column of lava pouring down into a molten pool, with an old stone walkway cutting across it.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "case": [
+      {
+        "title": "Thumbnails",
+        "layout": "row",
+        "text": "Both thumbnails share the same scene: the crater, the lava falling from above, and the three-way stone walkway in the middle. The real question was how close we stand to the hero. Option two keeps him small, so the crater feels enormous. Option one brings him right up front, so you're standing next to him and following his finger. The final went with option one.",
+        "images": [
+          {
+            "image": "images/case/wish12-thumb-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/wish12-thumb-2.jpg",
+            "label": "Option 2"
+          }
+        ]
+      },
+      {
+        "title": "Lighting it with lava",
+        "layout": "wide",
+        "text": "In grey, the lava is just a bright shape. In colour it becomes the light for the whole picture: hot orange on the cliff walls, a rim of light on the hero's hair, and the edges of the stone walkway glowing. We kept his cloak cool and purple so he doesn't melt into the background.",
+        "images": [
+          {
+            "image": "images/case/wish12-final.jpg",
+            "label": "Final illustration, before the title"
+          }
+        ]
+      }
+    ],
+    "link_text": "Wish Upon the Stars is published by Timeless Wind Publishing.",
+    "link_label": "See the series",
+    "link_url": "https://www.timelesswind.com/series/wish-upon-the-stars"
   },
   {
     "title": "Wish Upon the Stars, Book 13",
+    "slug": "wish-upon-the-stars-13",
     "category": "covers",
     "type": "Book cover",
     "year": "",
+    "client": "Malcolm Tent, Timeless Wind Publishing",
+    "role": "Thumbnails, illustration, painting",
     "image": "images/wish-13.jpg",
     "tags": [
       "book cover",
       "litrpg",
       "series"
     ],
-    "description": "LitRPG series cover: an elven archer takes aim at a red castle beneath a storm of bats.",
-    "story": "",
+    "description": "LitRPG series cover: an elven archer takes aim at a woman made of bats, rising over a red castle.",
+    "story": "Book 13 of Wish Upon the Stars. We had the chance to paint this series from book 11 to book 14, so by this one the world already felt like home. An elven archer, a castle on the hill, a woman made of bats rising above it, and a huge pair of eyes watching from the clouds.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "case": [
+      {
+        "title": "Thumbnails",
+        "layout": "row",
+        "text": "Two thumbnails for this one. Option two is close and dramatic, with the archer big in the corner and the bat woman almost in her face. Option one pulls back, puts the archer in the middle and lets the castle and the eyes in the sky do the talking. The final grew out of option one.",
+        "images": [
+          {
+            "image": "images/case/wish13-thumb-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/wish13-thumb-2.jpg",
+            "label": "Option 2"
+          }
+        ]
+      },
+      {
+        "title": "Painting in red",
+        "layout": "wide",
+        "text": "Almost the whole cover lives in one colour, so the real job was getting depth out of it: darker clouds at the edges, a hot glow behind the castle, and the archer's white hair as the one cool spot that pulls your eye in. The bats do double duty too. They're the swarm in the sky and her dress at the same time.",
+        "images": [
+          {
+            "image": "images/case/wish13-final.jpg",
+            "label": "Final illustration, before the title"
+          }
+        ]
+      }
+    ],
+    "link_text": "Wish Upon the Stars is published by Timeless Wind Publishing.",
+    "link_label": "See the series",
+    "link_url": "https://www.timelesswind.com/series/wish-upon-the-stars"
   },
   {
     "title": "Dusklander",
@@ -61,7 +168,7 @@
       "key art"
     ],
     "description": "Key art for Dusklander on Steam: an axe-wielding wanderer by a campfire while red eyes watch from the dark forest.",
-    "story": "",
+    "story": "Key art for Dusklander, a game on Steam. A fighter with a hatchet and a glowing hand stands by a small campfire at night, while red eyes watch her from the dark trees. One painting had to work as every capsule size the store page needs.",
     "hidden": false,
     "formats": [
       {
@@ -78,41 +185,199 @@
         "image": "images/dusklander-wide.jpg",
         "label": "Wide capsule",
         "note": "1920 × 1080"
+      },
+      {
+        "image": "images/case/dusk-header.jpg",
+        "label": "Header capsule",
+        "note": "1232 × 706"
       }
     ],
-    "process": []
+    "process": [],
+    "slug": "dusklander",
+    "client": "",
+    "role": "Thumbnails, key art, painting, capsule layouts",
+    "case": [
+      {
+        "title": "Thumbnails",
+        "layout": "row",
+        "text": "Three rough thumbnails, all built around the same moment: one fighter, one small fire, and too many eyes in the forest. Options one and two keep her on the left and the fire in the middle, so the right side stays open for the logo. Option three pushes in closer and makes it feel more like a fight. The final grew out of the first two.",
+        "images": [
+          {
+            "image": "images/case/dusk-thumb-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/dusk-thumb-2.jpg",
+            "label": "Option 2"
+          },
+          {
+            "image": "images/case/dusk-thumb-3.jpg",
+            "label": "Option 3"
+          }
+        ]
+      },
+      {
+        "title": "Painted by hand, on record",
+        "layout": "wide",
+        "text": "The client asked us to record the whole painting, as proof that it was made by hand with no AI involved. We were glad to. More and more clients want that kind of proof, and it's an easy thing to give when every brushstroke is yours. Here's a 30-second cut of that recording.",
+        "video": "images/case/dusk-process.mp4",
+        "poster": "images/case/dusk-process-poster.jpg",
+        "video_label": "30-second cut of the painting process",
+        "images": []
+      },
+      {
+        "title": "Fixing the legs",
+        "layout": "wide",
+        "text": "After the first full pass, the client asked for a revision on her legs. We redrew the pose underneath (the pink lines on the right) and repainted the legs to match the light from the fire, so the change sits naturally in the finished piece.",
+        "images": [
+          {
+            "image": "images/case/dusk-legs.jpg",
+            "label": "Before, after, and the pose check underneath"
+          }
+        ]
+      },
+      {
+        "title": "Every size Steam needs",
+        "layout": "wide",
+        "text": "A Steam page uses the same art in very different shapes. We painted the scene wide, then rebuilt it for each format, moving the character and the logo so nothing important gets cut off, whether it's a wide header or a tall library capsule.",
+        "images": [
+          {
+            "image": "images/case/dusk-wide-nologo.jpg",
+            "label": "Wide art without logo, 1920 × 1080"
+          },
+          {
+            "image": "images/case/dusk-header.jpg",
+            "label": "Header capsule, 1232 × 706"
+          },
+          {
+            "image": "images/case/dusk-vertical.jpg",
+            "label": "Vertical capsule, 600 × 900"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "The Dark King",
+    "slug": "the-dark-king",
     "category": "covers",
-    "type": "Full cover",
+    "type": "Full wrap book cover",
     "year": "",
+    "client": "Kimberly Lynn Hanson",
+    "role": "Thumbnails, illustration, painting, extra sketches",
     "image": "images/dark-king.jpg",
     "tags": [
       "book cover",
-      "dark fantasy"
+      "dark fantasy",
+      "full wrap"
     ],
-    "description": "Full cover for a dark fantasy novel: a lone king walking out of a burning red citadel.",
-    "story": "",
+    "description": "Full wrap cover for a dark fantasy novella: a lone king climbs the steps toward a burning red citadel.",
+    "story": "A full wrap cover for The Dark King, Kimberly Lynn Hanson's prequel novella to the Descendants of the Round Table series. One king, seen from behind, climbing toward a castle that looks like it's still burning. The whole picture had to carry the line on the cover: what is a king without a kingdom?",
     "hidden": false,
-    "formats": [],
-    "process": []
+    "formats": [
+      {
+        "image": "images/dark-king.jpg",
+        "label": "Front cover",
+        "note": ""
+      },
+      {
+        "image": "images/case/dk-full-wrap.jpg",
+        "label": "Full wrap",
+        "note": "Back, spine and front"
+      }
+    ],
+    "process": [],
+    "case": [
+      {
+        "title": "Thumbnails",
+        "layout": "row",
+        "text": "We started with three quick thumbnails, all built on the same idea: a lone king seen from behind, small against a huge castle. What changed was the camera and the mood. One is tight and busy, one opens up the sky, one pushes the castle far back and lets the steps lead you in. If you look closely, the final cover borrows a little from options two and three.",
+        "images": [
+          {
+            "image": "images/case/dk-thumb-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/dk-thumb-2.jpg",
+            "label": "Option 2"
+          },
+          {
+            "image": "images/case/dk-thumb-3.jpg",
+            "label": "Option 3"
+          }
+        ]
+      },
+      {
+        "title": "Painting the full wrap",
+        "layout": "wide",
+        "text": "The front is all heat: red light, cracked stone and smoke. For the back we went the other way and kept it quiet, just a stormy sky and one white bird flying away from the fire. It gives the back cover text room to breathe, and it makes the front feel even hotter when the book is opened flat.",
+        "images": [
+          {
+            "image": "images/case/dk-full-wrap.jpg",
+            "label": "The full wrap: back, spine and front"
+          }
+        ]
+      },
+      {
+        "title": "A few extra sketches",
+        "layout": "row",
+        "text": "Kimberly also asked for a couple of extra drawings from the same world: the king's crown and an old gothic window taken over by vines. We kept them in clean black and white ink, so they're easy to drop in wherever she needs them.",
+        "images": [
+          {
+            "image": "images/case/dk-crown.jpg",
+            "label": "The king's crown"
+          },
+          {
+            "image": "images/case/dk-window.jpg",
+            "label": "Gothic window"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Wild West",
     "category": "worlds",
-    "type": "Full cover illustration",
+    "type": "TTRPG cover illustration",
     "year": "",
     "image": "images/wild-west.jpg",
     "tags": [
+      "ttrpg",
       "environment",
       "western"
     ],
-    "description": "Desert landscape at sunset, painted as a full wrap cover: red mesas, cacti, a tumbleweed and a bleached bull skull.",
-    "story": "",
+    "description": "TTRPG cover: a desert landscape at sunset with red mesas, cacti, a tumbleweed and a bleached bull skull.",
+    "story": "A cover illustration for a Wild West tabletop RPG. No heroes and no gunfight, just the land itself: red mesas at sunset, a tumbleweed rolling past a bull skull, and a sky big enough to get lost in.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "slug": "wild-west",
+    "client": "",
+    "role": "Value sketch, illustration, painting",
+    "case": [
+      {
+        "title": "Value sketch on a perspective grid",
+        "layout": "wide",
+        "text": "Landscapes live or die on perspective, so we started with a grey value sketch laid over a perspective grid. It let us place every mesa at the right size and distance, and keep the ground believable all the way to the horizon. The bull skull and the tumbleweed were there from the start, small storytellers in the corner.",
+        "images": [
+          {
+            "image": "images/case/ww-sketch.jpg",
+            "label": "Value sketch with the perspective grid"
+          }
+        ]
+      },
+      {
+        "title": "Sunset in colour",
+        "layout": "wide",
+        "text": "Then the sunset came in. The sun sits low on the right and lights everything from behind, so the mesas glow along their edges and long shadows stretch across the sand. Warm oranges against a cool blue sky make the heat feel real, and the wide, calm sky leaves room for the cover text.",
+        "images": [
+          {
+            "image": "images/case/ww-final.jpg",
+            "label": "Final illustration"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Lantern Tree",
@@ -204,17 +469,59 @@
       "book cover",
       "fantasy"
     ],
-    "description": "Fantasy cover: two travellers stand back to back on a misty mountain meadow, with dragons circling the peaks.",
-    "story": "",
+    "description": "Fantasy cover: two travellers with packs and swords on a sunny mountain meadow, with dragons flying past the peaks.",
+    "story": "A cover for Zachary J. Simmons' Dual Wielding: Ash & Ember. Two travellers stop on a mountain meadow, one walking toward you with an easy smile, the other turned away, looking out at the peaks where dragons fly past. Two very different people setting off on the same road.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "slug": "dual-wielding-ash-and-ember",
+    "client": "Zachary J. Simmons",
+    "role": "Thumbnails, illustration, painting",
+    "case": [
+      {
+        "title": "Thumbnails",
+        "layout": "row",
+        "text": "Three thumbnails, all about the start of a journey. Option one shows the pair from behind under tall pines, looking over a misty valley. Option two turns one of them around to walk toward you, so you meet them face to face. Option three goes darker and more epic, with a huge peak and a dragon in the fog. The final takes the pose from option two and borrows the dragons from option three.",
+        "images": [
+          {
+            "image": "images/case/dw2-thumb-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/dw2-thumb-2.jpg",
+            "label": "Option 2"
+          },
+          {
+            "image": "images/case/dw2-thumb-3.jpg",
+            "label": "Option 3"
+          }
+        ]
+      },
+      {
+        "title": "From render to final",
+        "layout": "row",
+        "text": "The fog from the sketches gave way to a bright, clear day, because this story starts with hope, not danger. In the render pass the characters were still lineart over a painted landscape. From there we painted them in fully, added flowers on the hillside and soft light on the clouds, and left a calm patch of sky at the top for the gold title.",
+        "images": [
+          {
+            "image": "images/case/dw2-render.jpg",
+            "label": "Render in progress"
+          },
+          {
+            "image": "images/case/dw2-final.jpg",
+            "label": "Final cover"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Min-Maxing the Apocalypse, Book 1",
+    "slug": "min-maxing-the-apocalypse-1",
     "category": "covers",
     "type": "Book cover",
     "year": "",
+    "client": "Reece Brooks",
+    "role": "Thumbnails, illustration, painting",
     "image": "images/min-maxing-1.jpg",
     "tags": [
       "book cover",
@@ -222,59 +529,255 @@
       "series"
     ],
     "description": "LitRPG series cover: a hero raises twin glowing daggers toward a lone peak under an aurora sky.",
-    "story": "",
+    "story": "Book 1 of Min-Maxing the Apocalypse, Reece Brooks' LitRPG series. A lone hero reaches back for two glowing daggers on a mountain meadow, under a night sky torn open by streaks of light. We painted all three books in the series, plus an alternate cover.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "case": [
+      {
+        "title": "Thumbnails",
+        "layout": "row",
+        "text": "Two thumbnails, same pose: the hero reaching back for both daggers at once. Option one is close and heavy, almost all back and blades. Option two steps back and gives him a whole valley and sky to stand in. The final went with option two, and the sky ended up with a lot more to say.",
+        "images": [
+          {
+            "image": "images/case/mm1-thumb-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/mm1-thumb-2.jpg",
+            "label": "Option 2"
+          }
+        ]
+      },
+      {
+        "title": "A sky that's about to break",
+        "layout": "wide",
+        "text": "The plain grey sky from the thumbnail became the loudest part of the cover: ribbons of pink and cyan light sweeping across a night full of stars. Behind him we put one sharp, lonely peak, and under his feet a meadow of small blue flowers, so the scene feels calm and strange at the same time. The daggers glow in the same cyan as the sky, which ties him to whatever is happening up there.",
+        "images": [
+          {
+            "image": "images/case/mm1-final.jpg",
+            "label": "Final illustration, before the title"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Min-Maxing the Apocalypse, Book 2",
+    "slug": "min-maxing-the-apocalypse-2",
     "category": "covers",
     "type": "Book cover",
     "year": "",
+    "client": "Reece Brooks",
+    "role": "Gesture sketches, illustration, painting",
     "image": "images/min-maxing-2.jpg",
     "tags": [
       "book cover",
       "litrpg"
     ],
     "description": "LitRPG cover: a swordsman stands before a giant glowing blue gate in a blood-red wasteland.",
-    "story": "",
+    "story": "Book 2 of Min-Maxing the Apocalypse, Reece Brooks' LitRPG series. The hero stands in front of a giant sealed door cut into the rock, a blade in each hand, with cold blue light leaking through the crack.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "case": [
+      {
+        "title": "Gesture options",
+        "layout": "row",
+        "text": "By book two the world, the door and the hero were already clear, so there was no need for a full round of thumbnails. We went straight to the one thing still open: his body language. Option one catches him mid-step, walking up to the door. Option two plants him wide and still, squared up to it. A small difference on paper, but it changes the whole feeling of the cover. The final went with option one.",
+        "images": [
+          {
+            "image": "images/case/mm2-gesture-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/mm2-gesture-2.jpg",
+            "label": "Option 2"
+          }
+        ]
+      },
+      {
+        "title": "Blue against red",
+        "layout": "wide",
+        "text": "In grey the door is just a dark shape. In colour, the blue light from the crack does most of the work: it outlines the hero, picks out the carving on the door and pushes against the warm red rock all around. That contrast keeps him easy to read, even as a tiny thumbnail on a store page.",
+        "images": [
+          {
+            "image": "images/case/mm2-final.jpg",
+            "label": "Final cover"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Min-Maxing the Apocalypse, Book 3",
+    "slug": "min-maxing-the-apocalypse-3",
     "category": "covers",
     "type": "Book cover",
     "year": "",
+    "client": "Reece Brooks",
+    "role": "Thumbnails, colour study, illustration, painting",
     "image": "images/min-maxing-3.jpg",
     "tags": [
       "book cover",
       "litrpg",
       "series"
     ],
-    "description": "LitRPG series cover: a sailor at the bow faces a glowing sea monster rising from the waves.",
-    "story": "",
+    "description": "LitRPG series cover: a sailor at the bow faces a wall of glowing water and tentacles rising from the sea.",
+    "story": "Book 3 of Min-Maxing the Apocalypse, Reece Brooks' LitRPG series. The hero hangs off the rigging at the front of a ship, staring into a wall of glowing water and tentacles rising out of the sea.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "case": [
+      {
+        "title": "Thumbnails",
+        "layout": "row",
+        "text": "Three loose thumbnails, all about one feeling: something huge coming out of the sea, and one small person on a ship facing it. Option one looks down a long curve of water, option two tucks the ship under a breaking wave, and option three gets closest and lets the creature fill half the page. The final is built on option three, flipped so the hero sits on the left and the monster gets the rest.",
+        "images": [
+          {
+            "image": "images/case/mm3-thumb-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/mm3-thumb-2.jpg",
+            "label": "Option 2"
+          },
+          {
+            "image": "images/case/mm3-thumb-3.jpg",
+            "label": "Option 3"
+          }
+        ]
+      },
+      {
+        "title": "From colour study to painting",
+        "layout": "row",
+        "text": "The first colour pass was all about light: a cold aurora sky, glowing jellyfish under the water and a dark ship in front. In the painting, the sky became the creature itself, a giant shape of water and tentacles, and the blur on the waves makes the whole scene feel like it's moving fast.",
+        "images": [
+          {
+            "image": "images/case/mm3-colour-study.jpg",
+            "label": "Colour study"
+          },
+          {
+            "image": "images/case/mm3-painting.jpg",
+            "label": "Painting"
+          }
+        ]
+      },
+      {
+        "title": "One more monster",
+        "layout": "row",
+        "text": "After the cover was finished, one more idea came in: a sea serpent sliding through the water in the corner. It's a small addition, but it makes the sea feel full of things that want the ship gone.",
+        "images": [
+          {
+            "image": "images/case/mm3-before.jpg",
+            "label": "Before"
+          },
+          {
+            "image": "images/case/mm3-after.jpg",
+            "label": "After, with the sea serpent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Min-Maxing the Apocalypse, Alternate Cover",
+    "slug": "min-maxing-the-apocalypse-alternate",
+    "category": "covers",
+    "type": "Alternate book cover",
+    "year": "",
+    "client": "Reece Brooks",
+    "role": "Sketch, illustration, painting",
+    "image": "images/min-maxing-alt.jpg",
+    "tags": [
+      "book cover",
+      "litrpg",
+      "series"
+    ],
+    "description": "Alternate LitRPG cover: a lone hero with a sword looks up at towering spires that split open into a starry sky.",
+    "story": "An alternate cover for Reece Brooks' Min-Maxing the Apocalypse, our fourth cover for the series. The hero stands at the foot of impossible spires, sword down, looking up at the light pouring through the gap between them.",
+    "hidden": false,
+    "formats": [],
+    "process": [],
+    "case": [
+      {
+        "title": "Sketch to colour",
+        "layout": "row",
+        "text": "The idea was all about scale. We put the camera almost on the ground and looked straight up, so the towers seem to go on forever and the hero, even standing close to us, still feels small. The first sketch was dark and heavy, a night sky over black stone. In colour we flipped the mood: soft violet clouds, pink light and a sky full of stars, so the place feels less like a threat and more like something to climb.",
+        "images": [
+          {
+            "image": "images/case/mmalt-sketch.jpg",
+            "label": "Sketch"
+          },
+          {
+            "image": "images/case/mmalt-painting.jpg",
+            "label": "Painting"
+          }
+        ]
+      },
+      {
+        "title": "Room for the title",
+        "layout": "wide",
+        "text": "The gap between the two tallest spires does double duty: it's where the light breaks through, and it gives the title a clean, bright space to sit in. The type matches the rest of the series, so the alternate cover still sits comfortably next to books one to three.",
+        "images": [
+          {
+            "image": "images/min-maxing-alt.jpg",
+            "label": "Final cover"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Les Bagues du Temps",
+    "slug": "les-bagues-du-temps",
     "category": "covers",
     "type": "Book cover",
     "year": "",
+    "client": "",
+    "role": "Thumbnails, illustration, painting",
     "image": "images/les-bagues.jpg",
     "tags": [
       "book cover",
       "young adult"
     ],
     "description": "Cover for a French young adult novel: five friends in a narrow alley lit by golden evening light.",
-    "story": "",
+    "story": "A cover for Les Bagues du Temps, a French young adult novel. Five friends hang out in a narrow alley at golden hour, and the girl in the middle turns back to wave, like she's asking you to come along.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "case": [
+      {
+        "title": "Thumbnails",
+        "layout": "row",
+        "text": "Three ways to introduce the same group of friends. Option one is playful and close, with the lead reaching right out of the cover toward you. Option two is calmer: everyone in their own pose, the girl in the middle looking back over her shoulder. Option three turns them around to face the view at the end of the alley, quieter and more mysterious. Each one keeps room at the bottom for the title. The final grew out of option two.",
+        "images": [
+          {
+            "image": "images/case/lbdt-thumb-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/lbdt-thumb-2.jpg",
+            "label": "Option 2"
+          },
+          {
+            "image": "images/case/lbdt-thumb-3.jpg",
+            "label": "Option 3"
+          }
+        ]
+      },
+      {
+        "title": "Golden hour",
+        "layout": "wide",
+        "text": "We set it at golden hour, so the light pours in from the end of the alley, rims everyone in warm gold and leaves the walls dusty with ivy. Five characters is a lot for one cover, so each one got a different, easy-to-read pose, and the light keeps the girl in the middle as the first thing you see. The title runs right through the group, big and gold, without covering a single face.",
+        "images": [
+          {
+            "image": "images/case/lbdt-final.jpg",
+            "label": "Final cover"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Sword & Stones",
@@ -325,7 +828,7 @@
       {
         "title": "Sketch to colour",
         "layout": "row",
-        "text": "Once the thumbnail was set, we built the painting up one step at a time: a clean sketch, base colours, the light from the sword, then rendering. Kimberly saw every stage before we moved on, so changes stayed small and the final art was never a surprise.",
+        "text": "Once the thumbnail was set, we built the painting up one step at a time: a clean sketch, base colours, the light from the sword, then rendering. Kimberly saw every stage before we moved on, so changes stayed small along the way, and seeing her reaction to the finished cover was still the best part.",
         "images": [
           {
             "image": "images/case/ss-stage-1.jpg",
@@ -367,19 +870,106 @@
   },
   {
     "title": "The Boyfriend Experience",
+    "slug": "the-boyfriend-experience",
     "category": "covers",
     "type": "Graphic novel cover",
     "year": "",
+    "client": "Darnell Brown",
+    "role": "Cover concepts, illustration, painting, graphic novel art",
     "image": "images/boyfriend-experience.jpg",
     "tags": [
       "cover",
       "graphic novel"
     ],
-    "description": "Graphic novel cover in a bold magenta palette.",
-    "story": "",
+    "description": "Graphic novel cover: a woman wrapped around a man's shoulders stares at you, while he hides a gun at his side.",
+    "story": "The Boyfriend Experience is a graphic novel written and created by Darnell Brown, and we illustrated it. The cover had to sell the whole tone in one look: a woman wrapped around a man's shoulders, staring straight at you, while he looks away with a gun hanging at his side. Romance and danger in the same hug.",
     "hidden": false,
-    "formats": [],
-    "process": []
+    "formats": [
+      {
+        "image": "images/boyfriend-experience.jpg",
+        "label": "Cover",
+        "note": ""
+      },
+      {
+        "image": "images/case/tbe-kickstarter.jpg",
+        "label": "Kickstarter banner",
+        "note": "Wide"
+      }
+    ],
+    "process": [],
+    "case": [
+      {
+        "title": "Two concepts",
+        "layout": "row",
+        "text": "We started with two quick concepts. Concept two is tender: a forehead kiss, soft and close. Concept one is the same couple with something hidden: her eyes locked on you, his hand holding a gun down by his side. That one tells you there's more going on than a love story, so it's the one we took forward.",
+        "images": [
+          {
+            "image": "images/case/tbe-concept-1.jpg",
+            "label": "Concept 1"
+          },
+          {
+            "image": "images/case/tbe-concept-2.jpg",
+            "label": "Concept 2"
+          }
+        ]
+      },
+      {
+        "title": "Refining the sketch",
+        "layout": "row",
+        "text": "Next, the sketch got cleaned up and pushed: clearer faces, her fingers on his jaw, her other hand on his shoulder. The first flat colours went down on a solid red, keeping it simple and graphic, almost like a movie poster.",
+        "images": [
+          {
+            "image": "images/case/tbe-refine.jpg",
+            "label": "Refined sketch"
+          },
+          {
+            "image": "images/case/tbe-flats.jpg",
+            "label": "First colours"
+          }
+        ]
+      },
+      {
+        "title": "Two moods",
+        "layout": "row",
+        "text": "We tried the same image in two moods. Hot red feels bold and romantic. Dark green-black feels quieter, more like a thriller. Red stayed.",
+        "images": [
+          {
+            "image": "images/case/tbe-red.jpg",
+            "label": "Red"
+          },
+          {
+            "image": "images/case/tbe-dark.jpg",
+            "label": "Dark"
+          }
+        ]
+      },
+      {
+        "title": "The final cover",
+        "layout": "row",
+        "text": "The final painting softened the edges and added grain and glow, and the handwritten title cuts across the whole cover like a neon sign. A later colour update switched the title to white and put both credits at the bottom.",
+        "images": [
+          {
+            "image": "images/case/tbe-final-pink.jpg",
+            "label": "Final"
+          },
+          {
+            "image": "images/case/tbe-final-white.jpg",
+            "label": "Colour update"
+          }
+        ]
+      },
+      {
+        "title": "Wide version for Kickstarter",
+        "layout": "wide",
+        "text": "We also made a wide version of the artwork for the Kickstarter page, with the title and credits sitting in the open space on the left.",
+        "images": [
+          {
+            "image": "images/case/tbe-kickstarter.jpg",
+            "label": "Kickstarter banner"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "BlackVeins",
@@ -399,35 +989,135 @@
   },
   {
     "title": "DarkRE: Shadows of Nekrom",
+    "slug": "darkre-shadows-of-nekrom",
     "category": "covers",
     "type": "Book cover",
     "year": "",
+    "client": "SOMBRAcorpDT",
+    "role": "Thumbnails, illustration, painting",
     "image": "images/darkre.jpg",
     "tags": [
       "book cover",
       "dark fantasy"
     ],
     "description": "Dark fantasy cover: a swordswoman and an armoured knight in a dim corridor under the words Time is Dead.",
-    "story": "",
+    "story": "A cover for DarkRE: Shadows of Nekrom. Two fighters stand back to back in a dim stone room, a dagger in one hand and a greatsword in the other, under words written in blood on the wall: Time is Dead.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "case": [
+      {
+        "title": "Thumbnails",
+        "layout": "row",
+        "text": "Three thumbnails, same two characters back to back, same words on the wall. What changed was where we stand. Option one looks down from above, like we're watching them from a corner of the room. Option two is straight on, under a hard ceiling light. Option three pushes in close and lets the writing take over the top half. The final went with option one: looking down makes the room feel like a trap.",
+        "images": [
+          {
+            "image": "images/case/darkre-thumb-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/darkre-thumb-2.jpg",
+            "label": "Option 2"
+          },
+          {
+            "image": "images/case/darkre-thumb-3.jpg",
+            "label": "Option 3"
+          }
+        ]
+      },
+      {
+        "title": "Sketch and base colour",
+        "layout": "wide",
+        "text": "Option one got cleaned up into a proper sketch: faces, the armour plates, the dagger and the long sword. Then a first layer of colour went on, one warm light from above and everything else falling into shadow.",
+        "images": [
+          {
+            "image": "images/case/darkre-base.jpg",
+            "label": "Refined sketch with base colour"
+          }
+        ]
+      },
+      {
+        "title": "Painting the room",
+        "layout": "row",
+        "text": "In the painting the room got its details: a caged lamp overhead, the writing dripping down the wall, and blurred chains in the foreground, as if you're peeking in from the dark. We did two colour passes to tune how warm the light should feel before the title went on.",
+        "images": [
+          {
+            "image": "images/case/darkre-colour-1.jpg",
+            "label": "Colour pass 1"
+          },
+          {
+            "image": "images/case/darkre-colour-2.jpg",
+            "label": "Colour pass 2"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Children of Nemia",
+    "slug": "children-of-nemia",
     "category": "covers",
-    "type": "Book cover",
+    "type": "Full wrap book cover",
     "year": "",
+    "client": "Michael Goe",
+    "role": "Thumbnails, illustration, painting",
     "image": "images/children-of-nemia.jpg",
     "tags": [
       "book cover",
       "fantasy"
     ],
     "description": "Fantasy cover: two young adventurers run through a misty forest hung with prayer flags.",
-    "story": "",
+    "story": "A full wrap cover for Michael Goe's Children of Nemia, one of two covers we painted for Michael, along with The New Frontier. Two young adventurers run down a path through a misty forest of giant trees, with strings of coloured flags tied between the trunks.",
     "hidden": false,
-    "formats": [],
-    "process": []
+    "formats": [
+      {
+        "image": "images/children-of-nemia.jpg",
+        "label": "Front cover",
+        "note": ""
+      },
+      {
+        "image": "images/case/nemia-full-wrap.jpg",
+        "label": "Full wrap",
+        "note": "Back, spine and front"
+      }
+    ],
+    "process": [],
+    "case": [
+      {
+        "title": "Thumbnails for the full wrap",
+        "layout": "row",
+        "text": "Because this was a full wrap, every thumbnail was planned across the back, the spine and the front at once. The thin blue lines mark where the spine sits. Three of them follow the kids from behind, running into the fog. Option four turns them around to run toward you. The final mixes two ideas: the giant tree from option two fills the back, and the kids from option four run toward you on the front.",
+        "images": [
+          {
+            "image": "images/case/nemia-thumb-1.jpg",
+            "label": "Option 1"
+          },
+          {
+            "image": "images/case/nemia-thumb-2.jpg",
+            "label": "Option 2"
+          },
+          {
+            "image": "images/case/nemia-thumb-3.jpg",
+            "label": "Option 3"
+          },
+          {
+            "image": "images/case/nemia-thumb-4.jpg",
+            "label": "Option 4"
+          }
+        ]
+      },
+      {
+        "title": "A forest you could walk into",
+        "layout": "wide",
+        "text": "We kept the whole forest soft and foggy, so the two kids and the gold title are the only sharp things you see. The coloured flags were a small touch we loved: they wrap around the big tree on the back, run across the spine and pop up again on the front, tying the whole wrap together when the book is opened flat.",
+        "images": [
+          {
+            "image": "images/case/nemia-full-wrap.jpg",
+            "label": "The full wrap: back, spine and front"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "World Map",
@@ -440,10 +1130,48 @@
       "map"
     ],
     "description": "Painted map of a walled city in a river valley, ringed by farmland, mountains and ruins. Illustration for an upcoming board game. More details will follow once the game is announced.",
-    "story": "",
+    "story": "The main board for an upcoming board game: a walled city in the middle of a river valley, with every place the players can travel to laid out around it. More details will follow once the game is announced.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "slug": "board-game-world-map",
+    "client": "",
+    "role": "Map layout, line art, painting",
+    "case": [
+      {
+        "title": "Planning the board",
+        "layout": "wide",
+        "text": "A game board is a map first and a painting second, so we started by placing every location the game needs: the city in the middle, then the forest, mountain, quarry, gold mine, dungeon, sanctuary and farm fields around it, all joined by roads and rivers. Rough colour blocks and labels let the client check the layout before any detail went in.",
+        "images": [
+          {
+            "image": "images/case/map-layout.jpg",
+            "label": "Layout with every location labelled"
+          }
+        ]
+      },
+      {
+        "title": "Line art",
+        "layout": "wide",
+        "text": "With the layout approved, everything got drawn properly: the city walls and towers, hundreds of little houses, the cliffs, bridges and rock formations. Seen from high above at an angle, the whole valley needed to read clearly even when the board is lying flat on a table.",
+        "images": [
+          {
+            "image": "images/case/map-lines.jpg",
+            "label": "Clean line art"
+          }
+        ]
+      },
+      {
+        "title": "Painting the valley",
+        "layout": "wide",
+        "text": "In the painting we gave each area its own colour and mood, so players can tell them apart at a glance: bright green plains around the city, golden fields, cool blue rivers, dusty stone at the quarry and darker rock around the dungeon. Clouds soften the edges and frame the city in the centre.",
+        "images": [
+          {
+            "image": "images/case/map-final.jpg",
+            "label": "Final main board"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Gold Dragon",
@@ -535,11 +1263,64 @@
       "world building",
       "environment"
     ],
-    "description": "Environment key art for World of Kala, a fantasy world built in-house at the studio.",
-    "story": "",
+    "description": "Key art for World of Kala, our own fantasy world: Raga, the silent guardian, standing in a giant tree at the gate of Kala.",
+    "story": "World of Kala is our own fantasy world, built in-house at the studio.\n\nNam is one of many realms inside Kala, a parallel world full of wonders: more realms than anyone can count, strange creatures, ancient tribes, and things nobody has a name for yet. At the gate of Kala stands Raga, a lone guardian who has watched over it for longer than anyone remembers. Half creature, he never sleeps, never moves, never tires and never speaks.\n\nSome tribes from the realm of Andar worship him as a god, and they're not the only ones. But the people of Nam, the wizards, see him differently. We honor him and we respect him, but to us he is no god. He is the Guardian.",
     "hidden": false,
     "formats": [],
-    "process": []
+    "process": [],
+    "slug": "world-of-kala",
+    "client": "",
+    "role": "World building, environment and character design, key art, logo",
+    "case": [
+      {
+        "title": "Finding the gate",
+        "layout": "wide",
+        "text": "It started with a question: what does the gate to a whole world look like? We sketched a few answers, a ruin, a shelter, a house grown into a tree, and kept coming back to one idea: a tree so old and so huge that a doorway could live inside it. The grey study on the right tested how small a person would feel standing in front of it.",
+        "images": [
+          {
+            "image": "images/case/kala-env-explore.jpg",
+            "label": "Environment sketches and a first value study"
+          }
+        ]
+      },
+      {
+        "title": "Raga at the gate",
+        "layout": "wide",
+        "text": "In the key art, Raga stands inside the glowing opening of the tree, still as a statue, with a ruined wall stretching out on both sides. A wizard of Nam sits on the hill in front, watching him. We kept the colours bright and the sky open, so the world feels full of wonder, while Raga himself stays dark and quiet in the middle of it all.",
+        "images": [
+          {
+            "image": "images/case/kala-key-art.jpg",
+            "label": "Key art: the gate of Kala"
+          }
+        ]
+      },
+      {
+        "title": "The wizards of Nam",
+        "layout": "wide",
+        "text": "The people of Nam are winged wizards, so each one needed a silhouette you can read at a glance: the size and shape of the wings, the cloak, the way they stand. Young or old, each wizard got a different colour story and little details, like stars, moons and jewellery, that hint at who they are.",
+        "images": [
+          {
+            "image": "images/case/kala-wizards.jpg",
+            "label": "Wizard line-up"
+          },
+          {
+            "image": "images/case/kala-character-sheet.jpg",
+            "label": "Character sheet: front, back and wing studies"
+          }
+        ]
+      },
+      {
+        "title": "A symbol for Kala",
+        "layout": "wide",
+        "text": "Finally, Kala got its own mark: a rough, hand-made symbol, part compass and part star, for a world that's all about the journey between realms.",
+        "images": [
+          {
+            "image": "images/case/kala-logo.jpg",
+            "label": "The Kala symbol"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "The Malay Mysteries",
