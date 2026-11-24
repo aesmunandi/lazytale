@@ -2,7 +2,7 @@
 media:
   input: images/uploads
   output: images/uploads
-  categories: [image]
+  categories: [image, video]
 
 content:
   - name: projects
@@ -81,6 +81,8 @@ content:
         fields:
           - { name: title, label: Section title, type: string }
           - { name: text, label: Text, type: text }
+          - { name: video, label: "Process video (optional, MP4)", type: file }
+          - { name: video_label, label: Video caption (optional), type: string }
           - name: layout
             label: Image layout
             type: select
