@@ -199,6 +199,8 @@ header.site .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:cent
 .strip figure,.wide figure{margin:0;min-width:0}
 .shot{display:block;width:100%;border:0;padding:0;background:var(--soft);border-radius:16px;overflow:hidden;cursor:zoom-in}
 .shot img{width:100%;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.strip .shot{aspect-ratio:var(--ar,auto)}
+.strip .shot img{height:100%;object-fit:cover}
 .shot:hover img{transform:scale(1.03)}
 figcaption{margin-top:10px;font-size:15px;font-weight:500}
 figcaption b{color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums;margin-right:8px}
@@ -209,8 +211,11 @@ figcaption b{color:var(--accent);font-weight:700;font-variant-numeric:tabular-nu
   .swipe{display:block!important}
 }
 .swipe{display:none;margin-top:12px;font-size:13px;color:var(--muted)}
+.vid{margin:0 0 24px;max-width:1180px;margin-inline:auto}
+.vid video{display:block;width:100%;border-radius:24px;background:#000}
 .wide{display:grid;gap:24px;max-width:1180px;margin-inline:auto}
-.wide .shot{border-radius:24px}
+.wide .shot{border-radius:24px;width:fit-content;max-width:100%;margin-inline:auto}
+.wide .shot img{width:auto;max-width:100%;max-height:88vh;margin-inline:auto}
 .outro{margin-top:clamp(56px,7vw,88px);display:flex;justify-content:space-between;align-items:center;gap:16px 32px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:24px}
 .outro p{margin:0;color:var(--muted);font-size:17px}
 .outro a{font-weight:600;color:var(--accent)}
@@ -336,12 +341,28 @@ fetch("content/projects.json", {cache:"no-cache"}).then(r => r.json()).then(list
           <div><div class="num">${String(n + 1).padStart(2, "0")}</div><h2>${esc(s.title)}</h2></div>
           <p>${para(s.text)}</p>
         </div>
+        ${s.video ? `<figure class="vid reveal"><video src="${esc(s.video)}"${s.poster ? ` poster="${esc(s.poster)}"` : ""} controls muted loop playsinline preload="metadata"></video>${s.video_label ? `<figcaption>${esc(s.video_label)}</figcaption>` : ""}</figure>` : ""}
         ${imgs.length ? (row
           ? `<ul class="strip reveal">${imgs.map((im, i) => `<li>${fig(im, i, true)}</li>`).join("")}</ul><p class="swipe">Swipe to see every step →</p>`
           : `<div class="wide reveal">${imgs.map((im, i) => fig(im, i, false)).join("")}</div>`) : ""}
       </section>`;
     }).join("")}
     ${p.link_url ? `<div class="g"><div class="outro reveal"><p>${esc(p.link_text || "More about this project:")}</p><a href="${esc(p.link_url)}" target="_blank" rel="noopener">${esc(p.link_label || "Read more")} ↗</a></div></div>` : ""}`;
+  /* every image in a row takes the shape of the first one, so the row lines up */
+  page.querySelectorAll(".strip").forEach(st => {
+    const first = st.querySelector("img"); if (!first) return;
+    const n = st.children.length;
+    const set = () => { if (!first.naturalWidth) return; const ar = first.naturalWidth / first.naturalHeight;
+      st.style.setProperty("--ar", first.naturalWidth + "/" + first.naturalHeight);
+      if (innerWidth > 760) st.style.maxWidth = `calc(${n} * 74vh * ${ar.toFixed(3)} + ${(n - 1) * 12}px)`; };
+    first.complete ? set() : first.addEventListener("load", set);
+    first.loading = "eager";
+  });
+  /* process videos play by themselves (muted) once they scroll into view */
+  if ("IntersectionObserver" in window) {
+    const vo = new IntersectionObserver(es => es.forEach(e => { const v = e.target; if (e.isIntersecting) v.play().catch(() => {}); else v.pause(); }), {threshold:.4});
+    page.querySelectorAll(".vid video").forEach(v => vo.observe(v));
+  }
   /* gentle rise as each part scrolls into view */
   const els = page.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
