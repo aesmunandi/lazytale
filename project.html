@@ -202,27 +202,16 @@ header.site .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:cent
 .step-head h2{font-size:clamp(30px,3.6vw,48px);font-weight:600;letter-spacing:-.03em;line-height:1.05;margin-top:8px}
 .step-head p{margin:0;color:var(--muted);font-size:clamp(17px,1.4vw,19px);line-height:1.65;max-width:60ch;padding-top:6px}
 @media (max-width:860px){.step-head{grid-template-columns:1fr;gap:12px}}
-.strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:12px;margin:0;padding:0;list-style:none}
-.strip figure,.wide figure{margin:0;min-width:0}
+.jg{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:0;padding:0;list-style:none}
+.jg figure{margin:0;min-width:0;flex:none;width:var(--w,30%)}
 .shot{display:block;width:100%;border:0;padding:0;background:var(--soft);border-radius:16px;overflow:hidden;cursor:zoom-in}
-.shot img{width:100%;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
-.strip .shot{aspect-ratio:var(--ar,auto)}
-.strip .shot img{height:100%;object-fit:cover}
+.shot img{width:100%;height:var(--h,auto);object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 .shot:hover img{transform:scale(1.03)}
 figcaption{margin-top:10px;font-size:15px;font-weight:500}
 figcaption b{color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums;margin-right:8px}
-@media (max-width:760px){
-  .strip{grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(-1 * var(--gut));padding-inline:var(--gut);scroll-padding-inline:var(--gut)}
-  .strip::-webkit-scrollbar{display:none}
-  .strip li{scroll-snap-align:start}
-  .swipe{display:block!important}
-}
-.swipe{display:none;margin-top:12px;font-size:13px;color:var(--muted)}
-.vid{margin:0 0 24px;max-width:1180px;margin-inline:auto}
-.vid video{display:block;width:100%;border-radius:24px;background:#000}
-.wide{display:grid;gap:24px;max-width:1180px;margin-inline:auto}
-.wide .shot{border-radius:24px;width:fit-content;max-width:100%;margin-inline:auto}
-.wide .shot img{width:auto;max-width:100%;max-height:88vh;margin-inline:auto}
+.vid{margin:0 0 24px;text-align:center}
+.vid video{display:inline-block;max-width:100%;max-height:72vh;width:auto;border-radius:20px;background:#000;vertical-align:top}
+.vid figcaption{text-align:center}
 .outro{margin-top:clamp(56px,7vw,88px);display:flex;justify-content:space-between;align-items:center;gap:16px 32px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:24px}
 .outro p{margin:0;color:var(--muted);font-size:17px}
 .outro a{font-weight:600;color:var(--accent)}
@@ -329,7 +318,7 @@ fetch("content/projects.json", {cache:"no-cache"}).then(r => r.json()).then(list
   document.title = `${p.title} | Lazy Tale Studio`;
   const meta = [["Format", p.type], ["Year", p.year], ["Client", p.client], ["Our role", p.role]].filter(m => m[1]);
   const sections = (p.case || []).filter(s => s && (s.title || s.text || (s.images || []).length));
-  const fig = (im, i, numbered) => `<figure><button class="shot" type="button" data-full="${esc(im.image)}" data-cap="${esc(im.label)}"><img src="${esc(im.image)}" alt="${esc(p.title + (im.label ? ", " + im.label : ""))}" loading="lazy"></button>${im.label ? `<figcaption>${numbered ? `<b>${String(i + 1).padStart(2, "0")}</b>` : ""}${esc(im.label)}</figcaption>` : ""}</figure>`;
+  const fig = (im, i, numbered) => `<figure${im.ar ? ` data-ar="${+im.ar}"` : ""}><button class="shot" type="button" data-full="${esc(im.image)}" data-cap="${esc(im.label)}"><img src="${esc(im.image)}" alt="${esc(p.title + (im.label ? ", " + im.label : ""))}" loading="lazy"></button>${im.label ? `<figcaption>${numbered ? `<b>${String(i + 1).padStart(2, "0")}</b>` : ""}${esc(im.label)}</figcaption>` : ""}</figure>`;
   page.innerHTML = `
     <section class="p-hero g">
       <button class="p-cover reveal" type="button" data-full="${esc(p.image)}" data-cap="${esc(p.title)}"><img src="${esc(p.image)}" alt="${esc(p.title)}, final cover"></button>
@@ -349,22 +338,41 @@ fetch("content/projects.json", {cache:"no-cache"}).then(r => r.json()).then(list
           <p>${para(s.text)}</p>
         </div>
         ${s.video ? `<figure class="vid reveal"><video src="${esc(s.video)}"${s.poster ? ` poster="${esc(s.poster)}"` : ""} controls muted loop playsinline preload="metadata"></video>${s.video_label ? `<figcaption>${esc(s.video_label)}</figcaption>` : ""}</figure>` : ""}
-        ${imgs.length ? (row
-          ? `<ul class="strip reveal">${imgs.map((im, i) => `<li>${fig(im, i, true)}</li>`).join("")}</ul><p class="swipe">Swipe to see every step →</p>`
-          : `<div class="wide reveal">${imgs.map((im, i) => fig(im, i, false)).join("")}</div>`) : ""}
+        ${imgs.length ? `<div class="jg reveal">${imgs.map((im, i) => fig(im, i, row)).join("")}</div>` : ""}
       </section>`;
     }).join("")}
     ${p.link_url ? `<div class="g"><div class="outro reveal"><p>${esc(p.link_text || "More about this project:")}</p>${/^https?:/.test(p.link_url) ? `<a href="${esc(p.link_url)}" target="_blank" rel="noopener">${esc(p.link_label || "Read more")} ↗</a>` : `<a href="${esc(p.link_url)}">${esc(p.link_label || "Read more")} →</a>`}</div></div>` : ""}`;
-  /* every image in a row takes the shape of the first one, so the row lines up */
-  page.querySelectorAll(".strip").forEach(st => {
-    const first = st.querySelector("img"); if (!first) return;
-    const n = st.children.length;
-    const set = () => { if (!first.naturalWidth) return; const ar = first.naturalWidth / first.naturalHeight;
-      st.style.setProperty("--ar", first.naturalWidth + "/" + first.naturalHeight);
-      if (innerWidth > 760) st.style.maxWidth = `calc(${n} * 74vh * ${ar.toFixed(3)} + ${(n - 1) * 12}px)`; };
-    first.complete ? set() : first.addEventListener("load", set);
-    first.loading = "eager";
+  /* Images sit in tidy rows that fit the screen: each row is scaled so the pictures share one height
+     and fill the width (tall panels line up side by side, wide ones go two or three to a row).
+     Nothing grows bigger than the screen; click any image to see it full size. */
+  const boxes = [...page.querySelectorAll(".jg")];
+  function layout(box){
+    const W = box.clientWidth; if (!W) return;
+    const figs = [...box.children], gap = 12, mob = innerWidth <= 760;
+    const ars = figs.map(f => +f.dataset.ar || 1);
+    const target = mob ? Math.min(240, W * .75) : Math.min(innerHeight * .42, 400);
+    const maxH = mob ? innerHeight * .6 : innerHeight * .72;
+    let row = [], sum = 0;
+    const place = (items, h) => items.forEach(k => { figs[k].style.setProperty("--w", Math.floor(ars[k] * h) + "px"); figs[k].style.setProperty("--h", Math.floor(h) + "px"); });
+    const rows = [];
+    /* if everything fits on one line at a comfortable height, keep it on one line */
+    const total = ars.reduce((x, y) => x + y, 0), one = (W - gap * (ars.length - 1)) / total;
+    if (ars.length > 1 && one >= (mob ? 140 : 250)) { place(ars.map((_, k) => k), Math.min(one, maxH)); return; }
+    ars.forEach((ar, k) => { row.push(k); sum += ar;
+      if (sum * target + gap * (row.length - 1) >= W) { rows.push([row, (W - gap * (row.length - 1)) / sum]); row = []; sum = 0; } });
+    if (row.length) rows.push([row, rows.length ? Math.min(target, (W - gap * (row.length - 1)) / sum) : Math.min(maxH, (W - gap * (row.length - 1)) / sum)]);
+    rows.forEach(([items, h]) => place(items, Math.min(h, maxH)));
+  }
+  boxes.forEach(box => {
+    [...box.children].forEach(f => {
+      const img = f.querySelector("img"); if (f.dataset.ar) return;
+      img.loading = "eager";
+      const set = () => { if (img.naturalWidth) { f.dataset.ar = img.naturalWidth / img.naturalHeight; layout(box); } };
+      img.complete ? set() : img.addEventListener("load", set);
+    });
+    layout(box);
   });
+  let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => boxes.forEach(layout), 120); });
   /* process videos play by themselves (muted) once they scroll into view */
   if ("IntersectionObserver" in window) {
     const vo = new IntersectionObserver(es => es.forEach(e => { const v = e.target; if (e.isIntersecting) v.play().catch(() => {}); else v.pause(); }), {threshold:.4});
