@@ -11,6 +11,13 @@
   if (t !== "dark" && t !== "light") { var m = /[?&]m=(dark|light)\b/.exec(location.search); t = m ? m[1] : null; }
   if (t !== "dark" && t !== "light") { try { t = sessionStorage.getItem("lt-mode"); } catch(e){} }
   if (t === "dark" || t === "light") root.setAttribute("data-theme", t);
+  /* the ?m= marker has done its job, so drop it from the address bar (keeps shared links clean) */
+  try {
+    if (/[?&]m=/.test(location.search) && history.replaceState) {
+      var q = location.search.slice(1).split("&").filter(function(x){ return x && !/^m=/.test(x); }).join("&");
+      history.replaceState(null, "", location.pathname + (q ? "?" + q : "") + location.hash);
+    }
+  } catch(e){}
   function current(){
     var a = root.getAttribute("data-theme");
     if (a === "dark" || a === "light") return a;

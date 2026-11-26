@@ -11,6 +11,13 @@
   if (t !== "dark" && t !== "light") { var m = /[?&]m=(dark|light)\b/.exec(location.search); t = m ? m[1] : null; }
   if (t !== "dark" && t !== "light") { try { t = sessionStorage.getItem("lt-mode"); } catch(e){} }
   if (t === "dark" || t === "light") root.setAttribute("data-theme", t);
+  /* the ?m= marker has done its job, so drop it from the address bar (keeps shared links clean) */
+  try {
+    if (/[?&]m=/.test(location.search) && history.replaceState) {
+      var q = location.search.slice(1).split("&").filter(function(x){ return x && !/^m=/.test(x); }).join("&");
+      history.replaceState(null, "", location.pathname + (q ? "?" + q : "") + location.hash);
+    }
+  } catch(e){}
   function current(){
     var a = root.getAttribute("data-theme");
     if (a === "dark" || a === "light") return a;
@@ -327,7 +334,7 @@ fetch("content/projects.json", {cache:"no-cache"}).then(r => r.json()).then(list
     <section class="p-hero g">
       <button class="p-cover reveal" type="button" data-full="${esc(p.image)}" data-cap="${esc(p.title)}"><img src="${esc(p.image)}" alt="${esc(p.title)}, final cover"></button>
       <div class="reveal">
-        <div class="eyebrow">Process · ${esc(p.type || "Project")}</div>
+        <div class="eyebrow">${p.category === "comics" ? "Story" : "Process"} · ${esc(p.type || "Project")}</div>
         <h1>${esc(p.title)}</h1>
         <p class="intro">${para(p.story || p.description)}</p>
         <dl class="p-meta">${meta.map(([k,v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
@@ -347,7 +354,7 @@ fetch("content/projects.json", {cache:"no-cache"}).then(r => r.json()).then(list
           : `<div class="wide reveal">${imgs.map((im, i) => fig(im, i, false)).join("")}</div>`) : ""}
       </section>`;
     }).join("")}
-    ${p.link_url ? `<div class="g"><div class="outro reveal"><p>${esc(p.link_text || "More about this project:")}</p><a href="${esc(p.link_url)}" target="_blank" rel="noopener">${esc(p.link_label || "Read more")} ↗</a></div></div>` : ""}`;
+    ${p.link_url ? `<div class="g"><div class="outro reveal"><p>${esc(p.link_text || "More about this project:")}</p>${/^https?:/.test(p.link_url) ? `<a href="${esc(p.link_url)}" target="_blank" rel="noopener">${esc(p.link_label || "Read more")} ↗</a>` : `<a href="${esc(p.link_url)}">${esc(p.link_label || "Read more")} →</a>`}</div></div>` : ""}`;
   /* every image in a row takes the shape of the first one, so the row lines up */
   page.querySelectorAll(".strip").forEach(st => {
     const first = st.querySelector("img"); if (!first) return;

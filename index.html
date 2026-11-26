@@ -11,6 +11,13 @@
   if (t !== "dark" && t !== "light") { var m = /[?&]m=(dark|light)\b/.exec(location.search); t = m ? m[1] : null; }
   if (t !== "dark" && t !== "light") { try { t = sessionStorage.getItem("lt-mode"); } catch(e){} }
   if (t === "dark" || t === "light") root.setAttribute("data-theme", t);
+  /* the ?m= marker has done its job, so drop it from the address bar (keeps shared links clean) */
+  try {
+    if (/[?&]m=/.test(location.search) && history.replaceState) {
+      var q = location.search.slice(1).split("&").filter(function(x){ return x && !/^m=/.test(x); }).join("&");
+      history.replaceState(null, "", location.pathname + (q ? "?" + q : "") + location.hash);
+    }
+  } catch(e){}
   function current(){
     var a = root.getAttribute("data-theme");
     if (a === "dark" || a === "light") return a;
@@ -548,7 +555,7 @@ const PROJECTS = RAW.filter(p => p && p.image && !p.hidden).map(p => {
     gallery: formats.length ? formats.map(f => ({img:f.image, label:f.label || "", note:f.note || ""})) : null,
     cropImg: formats.length ? biggest(formats).image : null,
     process:(p.process || []).filter(s => s.image).map(s => ({img:s.image, label:s.label || "", note:s.note || ""})),
-    client:p.client || "", slug:p.slug || "", hasCase:!!(p.slug && (p.case || []).length)};
+    client:p.client || "", slug:p.slug || "", hasCase:!!(p.slug && ((p.case || []).length || p.link_url))};
 });
 const REEL = RAWREEL.filter(r => r && r.image).map(r => {
   const fan = (r.fan || []).filter(Boolean);
