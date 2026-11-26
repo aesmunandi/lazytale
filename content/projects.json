@@ -25,23 +25,28 @@
         "images": [
           {
             "image": "images/case/ss-thumb-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 0.6461
           },
           {
             "image": "images/case/ss-thumb-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 0.6461
           },
           {
             "image": "images/case/ss-thumb-3.jpg",
-            "label": "Option 3"
+            "label": "Option 3",
+            "ar": 0.6445
           },
           {
             "image": "images/case/ss-thumb-4.jpg",
-            "label": "Option 4"
+            "label": "Option 4",
+            "ar": 0.6461
           },
           {
             "image": "images/case/ss-thumb-5.jpg",
-            "label": "Option 5"
+            "label": "Option 5",
+            "ar": 0.6461
           }
         ]
       },
@@ -52,23 +57,28 @@
         "images": [
           {
             "image": "images/case/ss-stage-1.jpg",
-            "label": "Sketch"
+            "label": "Sketch",
+            "ar": 0.6462
           },
           {
             "image": "images/case/ss-stage-2.jpg",
-            "label": "Base colours"
+            "label": "Base colours",
+            "ar": 0.6462
           },
           {
             "image": "images/case/ss-stage-3.jpg",
-            "label": "Light"
+            "label": "Light",
+            "ar": 0.6474
           },
           {
             "image": "images/case/ss-stage-4.jpg",
-            "label": "Rendering"
+            "label": "Rendering",
+            "ar": 0.6462
           },
           {
             "image": "images/case/ss-stage-5.jpg",
-            "label": "Final"
+            "label": "Final",
+            "ar": 0.6462
           }
         ]
       },
@@ -79,7 +89,8 @@
         "images": [
           {
             "image": "images/case/ss-title-options.jpg",
-            "label": "Two title placement mockups"
+            "label": "Two title placement mockups",
+            "ar": 1.3129
           }
         ]
       }
@@ -126,15 +137,18 @@
         "images": [
           {
             "image": "images/case/dk-thumb-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 0.6014
           },
           {
             "image": "images/case/dk-thumb-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 0.6107
           },
           {
             "image": "images/case/dk-thumb-3.jpg",
-            "label": "Option 3"
+            "label": "Option 3",
+            "ar": 0.5657
           }
         ]
       },
@@ -145,7 +159,8 @@
         "images": [
           {
             "image": "images/case/dk-full-wrap.jpg",
-            "label": "The full wrap: back, spine and front"
+            "label": "The full wrap: back, spine and front",
+            "ar": 1.3258
           }
         ]
       },
@@ -156,11 +171,13 @@
         "images": [
           {
             "image": "images/case/dk-crown.jpg",
-            "label": "The king's crown"
+            "label": "The king's crown",
+            "ar": 0.7069
           },
           {
             "image": "images/case/dk-window.jpg",
-            "label": "Gothic window"
+            "label": "Gothic window",
+            "ar": 0.7069
           }
         ]
       }
@@ -193,11 +210,13 @@
         "images": [
           {
             "image": "images/case/mmalt-sketch.jpg",
-            "label": "Sketch"
+            "label": "Sketch",
+            "ar": 0.625
           },
           {
             "image": "images/case/mmalt-painting.jpg",
-            "label": "Painting"
+            "label": "Painting",
+            "ar": 0.625
           }
         ]
       },
@@ -208,7 +227,8 @@
         "images": [
           {
             "image": "images/min-maxing-alt.jpg",
-            "label": "Final cover"
+            "label": "Final cover",
+            "ar": 0.625
           }
         ]
       }
@@ -241,15 +261,18 @@
         "images": [
           {
             "image": "images/case/mm3-thumb-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 0.625
           },
           {
             "image": "images/case/mm3-thumb-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 0.625
           },
           {
             "image": "images/case/mm3-thumb-3.jpg",
-            "label": "Option 3"
+            "label": "Option 3",
+            "ar": 0.625
           }
         ]
       },
@@ -260,11 +283,13 @@
         "images": [
           {
             "image": "images/case/mm3-colour-study.jpg",
-            "label": "Colour study"
+            "label": "Colour study",
+            "ar": 0.625
           },
           {
             "image": "images/case/mm3-painting.jpg",
-            "label": "Painting"
+            "label": "Painting",
+            "ar": 0.625
           }
         ]
       },
@@ -275,11 +300,13 @@
         "images": [
           {
             "image": "images/case/mm3-before.jpg",
-            "label": "Before"
+            "label": "Before",
+            "ar": 0.625
           },
           {
             "image": "images/case/mm3-after.jpg",
-            "label": "After, with the sea serpent"
+            "label": "After, with the sea serpent",
+            "ar": 0.625
           }
         ]
       }
@@ -312,11 +339,13 @@
         "images": [
           {
             "image": "images/case/mm1-thumb-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 0.625
           },
           {
             "image": "images/case/mm1-thumb-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 0.625
           }
         ]
       },
@@ -327,7 +356,8 @@
         "images": [
           {
             "image": "images/case/mm1-final.jpg",
-            "label": "Final illustration, before the title"
+            "label": "Final illustration, before the title",
+            "ar": 0.625
           }
         ]
       }
@@ -359,11 +389,13 @@
         "images": [
           {
             "image": "images/case/mm2-gesture-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 0.625
           },
           {
             "image": "images/case/mm2-gesture-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 0.625
           }
         ]
       },
@@ -374,7 +406,8 @@
         "images": [
           {
             "image": "images/case/mm2-final.jpg",
-            "label": "Final cover"
+            "label": "Final cover",
+            "ar": 0.625
           }
         ]
       }
@@ -407,11 +440,13 @@
         "images": [
           {
             "image": "images/case/wish13-thumb-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 0.6657
           },
           {
             "image": "images/case/wish13-thumb-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 0.6657
           }
         ]
       },
@@ -422,7 +457,8 @@
         "images": [
           {
             "image": "images/case/wish13-final.jpg",
-            "label": "Final illustration, before the title"
+            "label": "Final illustration, before the title",
+            "ar": 0.665
           }
         ]
       }
@@ -458,11 +494,13 @@
         "images": [
           {
             "image": "images/case/wish12-thumb-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 0.6657
           },
           {
             "image": "images/case/wish12-thumb-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 0.6657
           }
         ]
       },
@@ -473,7 +511,8 @@
         "images": [
           {
             "image": "images/case/wish12-final.jpg",
-            "label": "Final illustration, before the title"
+            "label": "Final illustration, before the title",
+            "ar": 0.6655
           }
         ]
       }
@@ -519,19 +558,23 @@
         "images": [
           {
             "image": "images/case/nemia-thumb-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 1.413
           },
           {
             "image": "images/case/nemia-thumb-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 1.5297
           },
           {
             "image": "images/case/nemia-thumb-3.jpg",
-            "label": "Option 3"
+            "label": "Option 3",
+            "ar": 1.3571
           },
           {
             "image": "images/case/nemia-thumb-4.jpg",
-            "label": "Option 4"
+            "label": "Option 4",
+            "ar": 1.4692
           }
         ]
       },
@@ -542,7 +585,8 @@
         "images": [
           {
             "image": "images/case/nemia-full-wrap.jpg",
-            "label": "The full wrap: back, spine and front"
+            "label": "The full wrap: back, spine and front",
+            "ar": 1.4563
           }
         ]
       }
@@ -574,11 +618,13 @@
         "images": [
           {
             "image": "images/case/nf-sketch.jpg",
-            "label": "Sketch"
+            "label": "Sketch",
+            "ar": 0.6857
           },
           {
             "image": "images/case/nf-final.jpg",
-            "label": "Final"
+            "label": "Final",
+            "ar": 0.6857
           }
         ]
       },
@@ -589,15 +635,18 @@
         "images": [
           {
             "image": "images/case/nf-final.jpg",
-            "label": "On the sail"
+            "label": "On the sail",
+            "ar": 0.6857
           },
           {
             "image": "images/case/nf-title-2.jpg",
-            "label": "At the bottom, silver"
+            "label": "At the bottom, silver",
+            "ar": 0.6849
           },
           {
             "image": "images/case/nf-title-3.jpg",
-            "label": "At the bottom, gold"
+            "label": "At the bottom, gold",
+            "ar": 0.6858
           }
         ]
       }
@@ -629,15 +678,18 @@
         "images": [
           {
             "image": "images/case/dw2-thumb-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 0.6471
           },
           {
             "image": "images/case/dw2-thumb-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 0.6471
           },
           {
             "image": "images/case/dw2-thumb-3.jpg",
-            "label": "Option 3"
+            "label": "Option 3",
+            "ar": 0.6471
           }
         ]
       },
@@ -648,11 +700,13 @@
         "images": [
           {
             "image": "images/case/dw2-render.jpg",
-            "label": "Render in progress"
+            "label": "Render in progress",
+            "ar": 0.6471
           },
           {
             "image": "images/case/dw2-final.jpg",
-            "label": "Final cover"
+            "label": "Final cover",
+            "ar": 0.6471
           }
         ]
       }
@@ -684,15 +738,18 @@
         "images": [
           {
             "image": "images/case/lbdt-thumb-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 0.705
           },
           {
             "image": "images/case/lbdt-thumb-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 0.705
           },
           {
             "image": "images/case/lbdt-thumb-3.jpg",
-            "label": "Option 3"
+            "label": "Option 3",
+            "ar": 0.705
           }
         ]
       },
@@ -703,7 +760,8 @@
         "images": [
           {
             "image": "images/case/lbdt-final.jpg",
-            "label": "Final cover"
+            "label": "Final cover",
+            "ar": 0.705
           }
         ]
       }
@@ -746,11 +804,13 @@
         "images": [
           {
             "image": "images/case/tbe-concept-1.jpg",
-            "label": "Concept 1"
+            "label": "Concept 1",
+            "ar": 0.7093
           },
           {
             "image": "images/case/tbe-concept-2.jpg",
-            "label": "Concept 2"
+            "label": "Concept 2",
+            "ar": 0.7093
           }
         ]
       },
@@ -761,11 +821,13 @@
         "images": [
           {
             "image": "images/case/tbe-refine.jpg",
-            "label": "Refined sketch"
+            "label": "Refined sketch",
+            "ar": 0.7093
           },
           {
             "image": "images/case/tbe-flats.jpg",
-            "label": "First colours"
+            "label": "First colours",
+            "ar": 0.7093
           }
         ]
       },
@@ -776,11 +838,13 @@
         "images": [
           {
             "image": "images/case/tbe-red.jpg",
-            "label": "Red"
+            "label": "Red",
+            "ar": 0.7093
           },
           {
             "image": "images/case/tbe-dark.jpg",
-            "label": "Dark"
+            "label": "Dark",
+            "ar": 0.7093
           }
         ]
       },
@@ -791,11 +855,13 @@
         "images": [
           {
             "image": "images/case/tbe-final-pink.jpg",
-            "label": "Final"
+            "label": "Final",
+            "ar": 0.7093
           },
           {
             "image": "images/case/tbe-final-white.jpg",
-            "label": "Colour update"
+            "label": "Colour update",
+            "ar": 0.7093
           }
         ]
       },
@@ -806,7 +872,20 @@
         "images": [
           {
             "image": "images/case/tbe-kickstarter.jpg",
-            "label": "Kickstarter banner"
+            "label": "Kickstarter banner",
+            "ar": 1.7778
+          }
+        ]
+      },
+      {
+        "title": "Graphic novel pages",
+        "layout": "wide",
+        "text": "A few panels from the graphic novel itself.",
+        "images": [
+          {
+            "image": "images/case/tbe-graphic-novel.jpg",
+            "label": "Panels from the graphic novel",
+            "ar": 2.1522
           }
         ]
       }
@@ -838,15 +917,18 @@
         "images": [
           {
             "image": "images/case/darkre-thumb-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 0.6664
           },
           {
             "image": "images/case/darkre-thumb-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 0.6664
           },
           {
             "image": "images/case/darkre-thumb-3.jpg",
-            "label": "Option 3"
+            "label": "Option 3",
+            "ar": 0.6664
           }
         ]
       },
@@ -857,7 +939,8 @@
         "images": [
           {
             "image": "images/case/darkre-base.jpg",
-            "label": "Refined sketch with base colour"
+            "label": "Refined sketch with base colour",
+            "ar": 0.6664
           }
         ]
       },
@@ -868,11 +951,13 @@
         "images": [
           {
             "image": "images/case/darkre-colour-1.jpg",
-            "label": "Colour pass 1"
+            "label": "Colour pass 1",
+            "ar": 0.6664
           },
           {
             "image": "images/case/darkre-colour-2.jpg",
-            "label": "Colour pass 2"
+            "label": "Colour pass 2",
+            "ar": 0.6664
           }
         ]
       }
@@ -942,15 +1027,18 @@
         "images": [
           {
             "image": "images/case/dusk-thumb-1.jpg",
-            "label": "Option 1"
+            "label": "Option 1",
+            "ar": 1.5891
           },
           {
             "image": "images/case/dusk-thumb-2.jpg",
-            "label": "Option 2"
+            "label": "Option 2",
+            "ar": 1.5891
           },
           {
             "image": "images/case/dusk-thumb-3.jpg",
-            "label": "Option 3"
+            "label": "Option 3",
+            "ar": 1.5891
           }
         ]
       },
@@ -970,7 +1058,8 @@
         "images": [
           {
             "image": "images/case/dusk-legs.jpg",
-            "label": "Before, after, and the pose check underneath"
+            "label": "Before, after, and the pose check underneath",
+            "ar": 1.7428
           }
         ]
       },
@@ -981,19 +1070,89 @@
         "images": [
           {
             "image": "images/case/dusk-wide-nologo.jpg",
-            "label": "Wide art without logo, 1920 × 1080"
+            "label": "Wide art without logo, 1920 × 1080",
+            "ar": 1.7778
           },
           {
             "image": "images/case/dusk-header.jpg",
-            "label": "Header capsule, 1232 × 706"
+            "label": "Header capsule, 1232 × 706",
+            "ar": 1.745
           },
           {
             "image": "images/case/dusk-vertical.jpg",
-            "label": "Vertical capsule, 600 × 900"
+            "label": "Vertical capsule, 600 × 900",
+            "ar": 0.6667
           }
         ]
       }
     ]
+  },
+  {
+    "title": "StellaGale: The Trials Of Faith",
+    "slug": "stellagale",
+    "category": "games",
+    "type": "Trailer background art",
+    "year": "",
+    "client": "Extra Life Entertainment",
+    "role": "Background art for the Steam trailer and promo video",
+    "image": "images/stellagale.jpg",
+    "tags": [
+      "game art",
+      "background",
+      "trailer"
+    ],
+    "description": "Background art for the StellaGale trailer: a Roman-style gladiator arena.",
+    "story": "Background art for the Steam trailer and promo video of StellaGale: The Trials Of Faith, a 2D side-scroller set in a steampunk Roman Empire. The backgrounds cover the gladiator arena at different times of day, the arena floor and the royal box.",
+    "hidden": false,
+    "formats": [],
+    "process": [],
+    "case": [
+      {
+        "title": "Backgrounds",
+        "layout": "wide",
+        "text": "",
+        "images": [
+          {
+            "image": "images/case/stella-1.jpg",
+            "label": "Arena at sunset",
+            "ar": 1.99
+          },
+          {
+            "image": "images/case/stella-2.jpg",
+            "label": "Arena in daylight",
+            "ar": 1.7311
+          },
+          {
+            "image": "images/case/stella-3.jpg",
+            "label": "Arena floor and the royal box",
+            "ar": 1.8067
+          },
+          {
+            "image": "images/case/stella-4.jpg",
+            "label": "Arena floor",
+            "ar": 1.6736
+          },
+          {
+            "image": "images/case/stella-5.jpg",
+            "label": "Arena walls",
+            "ar": 1.7873
+          },
+          {
+            "image": "images/case/stella-6.jpg",
+            "label": "Arena walls, midground layer",
+            "ar": 1.7873
+          },
+          {
+            "image": "images/case/stella-7.jpg",
+            "label": "The royal box",
+            "ar": 2.004
+          }
+        ]
+      }
+    ],
+    "link_text": "StellaGale: The Trials Of Faith is on Steam.",
+    "link_label": "See the game on Steam",
+    "link_url": "https://store.steampowered.com/app/1538710/StellaGale_The_Trials_Of_Faith/"
   },
   {
     "title": "Wild West",
@@ -1022,7 +1181,8 @@
         "images": [
           {
             "image": "images/case/ww-sketch.jpg",
-            "label": "Value sketch with the perspective grid"
+            "label": "Value sketch with the perspective grid",
+            "ar": 1.7002
           }
         ]
       },
@@ -1033,7 +1193,8 @@
         "images": [
           {
             "image": "images/case/ww-final.jpg",
-            "label": "Final illustration"
+            "label": "Final illustration",
+            "ar": 1.6997
           }
         ]
       }
@@ -1136,9 +1297,64 @@
     "formats": [],
     "process": [],
     "slug": "blackveins",
-    "link_text": "The Father is one of the short stories set in BlackVeins.",
-    "link_label": "Read The Father",
-    "link_url": "project.html?p=blackveins-the-father"
+    "link_text": "Fine Afternoon is one of the short stories set in BlackVeins.",
+    "link_label": "Read Fine Afternoon",
+    "link_url": "project.html?p=blackveins-fine-afternoon",
+    "case": [
+      {
+        "title": "Mood sketch exploration",
+        "layout": "row",
+        "text": "Rough line sketches first, then quick colour to find the mood.",
+        "images": [
+          {
+            "image": "images/case/bv-mood-lines.jpg",
+            "label": "Line sketch",
+            "ar": 0.707
+          },
+          {
+            "image": "images/case/bv-mood-colour.jpg",
+            "label": "Colour",
+            "ar": 0.707
+          }
+        ]
+      },
+      {
+        "title": "Story sketch",
+        "layout": "wide",
+        "text": "",
+        "images": [
+          {
+            "image": "images/case/bv-sketch.jpg",
+            "label": "",
+            "ar": 1.8265
+          }
+        ]
+      },
+      {
+        "title": "Character design exploration",
+        "layout": "wide",
+        "text": "",
+        "images": [
+          {
+            "image": "images/case/bv-character.jpg",
+            "label": "",
+            "ar": 1.5007
+          }
+        ]
+      },
+      {
+        "title": "Story sequence",
+        "layout": "wide",
+        "text": "An ordinary morning, an explosion over the city, and then the dead start to rise.",
+        "images": [
+          {
+            "image": "images/case/bv-sequence.jpg",
+            "label": "",
+            "ar": 0.8977
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "World Map",
@@ -1166,7 +1382,8 @@
         "images": [
           {
             "image": "images/case/map-layout.jpg",
-            "label": "Layout with every location labelled"
+            "label": "Layout with every location labelled",
+            "ar": 1.4997
           }
         ]
       },
@@ -1177,7 +1394,8 @@
         "images": [
           {
             "image": "images/case/map-lines.jpg",
-            "label": "Clean line art"
+            "label": "Clean line art",
+            "ar": 1.4997
           }
         ]
       },
@@ -1188,7 +1406,8 @@
         "images": [
           {
             "image": "images/case/map-final.jpg",
-            "label": "Final main board"
+            "label": "Final main board",
+            "ar": 1.4991
           }
         ]
       }
@@ -1284,7 +1503,8 @@
         "images": [
           {
             "image": "images/case/kala-env-explore.jpg",
-            "label": "Environment sketches and a first value study"
+            "label": "Environment sketches and a first value study",
+            "ar": 3.3501
           }
         ]
       },
@@ -1295,7 +1515,8 @@
         "images": [
           {
             "image": "images/case/kala-key-art.jpg",
-            "label": "Key art: the gate of Kala"
+            "label": "Key art: the gate of Kala",
+            "ar": 1.5385
           }
         ]
       },
@@ -1306,11 +1527,13 @@
         "images": [
           {
             "image": "images/case/kala-wizards.jpg",
-            "label": "Wizard line-up"
+            "label": "Wizard line-up",
+            "ar": 1.5428
           },
           {
             "image": "images/case/kala-character-sheet.jpg",
-            "label": "Character sheet: front, back and wing studies"
+            "label": "Character sheet: front, back and wing studies",
+            "ar": 1.6529
           }
         ]
       },
@@ -1321,7 +1544,8 @@
         "images": [
           {
             "image": "images/case/kala-logo.jpg",
-            "label": "The Kala symbol"
+            "label": "The Kala symbol",
+            "ar": 1.0444
           }
         ]
       }
@@ -1376,8 +1600,8 @@
     "process": []
   },
   {
-    "title": "BlackVeins Lore: The Father",
-    "slug": "blackveins-the-father",
+    "title": "BlackVeins Lore: Fine Afternoon",
+    "slug": "blackveins-fine-afternoon",
     "category": "comics",
     "type": "Short comic",
     "year": "",
@@ -1399,34 +1623,44 @@
         "title": "The story",
         "layout": "wide",
         "text": "",
+        "video": "images/case/fine-afternoon.mp4",
+        "poster": "images/case/fine-afternoon-poster.jpg",
+        "video_label": "",
         "images": [
           {
             "image": "images/case/father-1.jpg",
-            "label": ""
+            "label": "",
+            "ar": 0.5625
           },
           {
             "image": "images/case/father-2.jpg",
-            "label": ""
+            "label": "",
+            "ar": 0.5625
           },
           {
             "image": "images/case/father-3.jpg",
-            "label": ""
+            "label": "",
+            "ar": 0.5625
           },
           {
             "image": "images/case/father-4.jpg",
-            "label": ""
+            "label": "",
+            "ar": 0.5625
           },
           {
             "image": "images/case/father-5.jpg",
-            "label": ""
+            "label": "",
+            "ar": 0.5625
           },
           {
             "image": "images/case/father-6.jpg",
-            "label": ""
+            "label": "",
+            "ar": 0.5625
           },
           {
             "image": "images/case/father-7.jpg",
-            "label": ""
+            "label": "",
+            "ar": 0.5625
           }
         ]
       }
@@ -1462,31 +1696,38 @@
         "images": [
           {
             "image": "images/case/survive-1.jpg",
-            "label": ""
+            "label": "",
+            "ar": 1.3986
           },
           {
             "image": "images/case/survive-2.jpg",
-            "label": ""
+            "label": "",
+            "ar": 1.3986
           },
           {
             "image": "images/case/survive-3.jpg",
-            "label": ""
+            "label": "",
+            "ar": 1.3986
           },
           {
             "image": "images/case/survive-4.jpg",
-            "label": ""
+            "label": "",
+            "ar": 1.3986
           },
           {
             "image": "images/case/survive-5.jpg",
-            "label": ""
+            "label": "",
+            "ar": 1.3986
           },
           {
             "image": "images/case/survive-6.jpg",
-            "label": ""
+            "label": "",
+            "ar": 1.3986
           },
           {
             "image": "images/case/survive-7.jpg",
-            "label": ""
+            "label": "",
+            "ar": 1.3986
           }
         ]
       }
